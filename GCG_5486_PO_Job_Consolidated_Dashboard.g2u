@@ -1,0 +1,2286 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_Parts_Insp..Create(BaseForm)
+Gui.F_Parts_Insp..Size(14610,8715)
+Gui.F_Parts_Insp..MinX(11750)
+Gui.F_Parts_Insp..MinY(0)
+Gui.F_Parts_Insp..Position(0,0)
+Gui.F_Parts_Insp..BackColor(-2147483633)
+Gui.F_Parts_Insp..MousePointer(0)
+Gui.F_Parts_Insp..Event(UnLoad,F_Parts_Insp_UnLoad)
+Gui.F_Parts_Insp..Caption("Open PO and Open Job Review")
+Gui.F_Parts_Insp..AlwaysOnTop(False)
+Gui.F_Parts_Insp..FontName("Tahoma")
+Gui.F_Parts_Insp..FontSize(8.25)
+Gui.F_Parts_Insp..ControlBox(True)
+Gui.F_Parts_Insp..MaxButton(True)
+Gui.F_Parts_Insp..MinButton(True)
+Gui.F_Parts_Insp..Moveable(True)
+Gui.F_Parts_Insp..Sizeable(True)
+Gui.F_Parts_Insp..ShowInTaskBar(True)
+Gui.F_Parts_Insp..TitleBar(True)
+Gui.F_Parts_Insp.frameRefresh.Create(Frame)
+Gui.F_Parts_Insp.frameRefresh.Size(4230,645)
+Gui.F_Parts_Insp.frameRefresh.Position(45,-45)
+Gui.F_Parts_Insp.frameRefresh.Enabled(False)
+Gui.F_Parts_Insp.frameRefresh.Visible(True)
+Gui.F_Parts_Insp.frameRefresh.Zorder(0)
+Gui.F_Parts_Insp.frameRefresh.Caption("")
+Gui.F_Parts_Insp.frameRefresh.FontName("Tahoma")
+Gui.F_Parts_Insp.frameRefresh.FontSize(8.25)
+Gui.F_Parts_Insp.chkAutoRefresh.Create(CheckBox)
+Gui.F_Parts_Insp.chkAutoRefresh.Size(1560,300)
+Gui.F_Parts_Insp.chkAutoRefresh.Position(120,195)
+Gui.F_Parts_Insp.chkAutoRefresh.Parent("frameRefresh")
+Gui.F_Parts_Insp.chkAutoRefresh.Caption("Auto Refresh")
+Gui.F_Parts_Insp.chkAutoRefresh.Event(Click,chkAutoRefresh_Click)
+Gui.F_Parts_Insp.chkAutoRefresh.Enabled(True)
+Gui.F_Parts_Insp.chkAutoRefresh.Visible(True)
+Gui.F_Parts_Insp.chkAutoRefresh.Zorder(0)
+Gui.F_Parts_Insp.chkAutoRefresh.FontName("Tahoma")
+Gui.F_Parts_Insp.chkAutoRefresh.FontSize(8.25)
+Gui.F_Parts_Insp.lblRefreshLen.Create(Label,"Refresh in Minute(s):",True,1665,255,0,1710,300,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Parts_Insp.lblRefreshLen.Parent("frameRefresh")
+Gui.F_Parts_Insp.lblRefreshLen.BorderStyle(0)
+Gui.F_Parts_Insp.txtRefreshLen.Create(TextBox,"1",True,705,300,0,3390,210,False,1,"Arial",8,-2147483643,1)
+Gui.F_Parts_Insp.txtRefreshLen.Parent("frameRefresh")
+Gui.F_Parts_Insp.txtRefreshLen.NumericOnly(2)
+Gui.F_Parts_Insp.txtRefreshLen.Event(LostFocus,txtRefreshLen_LostFocus)
+Gui.F_Parts_Insp.cmdRefresh.Create(Button)
+Gui.F_Parts_Insp.cmdRefresh.Size(420,420)
+Gui.F_Parts_Insp.cmdRefresh.Position(4380,105)
+Gui.F_Parts_Insp.cmdRefresh.Caption("REFRESH")
+Gui.F_Parts_Insp.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.F_Parts_Insp.cmdRefresh.Enabled(True)
+Gui.F_Parts_Insp.cmdRefresh.Visible(True)
+Gui.F_Parts_Insp.cmdRefresh.Zorder(0)
+Gui.F_Parts_Insp.cmdRefresh.FontName("Tahoma")
+Gui.F_Parts_Insp.cmdRefresh.FontSize(8.25)
+Gui.F_Parts_Insp.cmdMaint.Create(Button)
+Gui.F_Parts_Insp.cmdMaint.Visible(False)
+Gui.F_Parts_Insp.cmdMaint.Size(1320,420)
+Gui.F_Parts_Insp.cmdMaint.Position(11775,105)
+Gui.F_Parts_Insp.cmdMaint.Caption("Maintenance")
+Gui.F_Parts_Insp.cmdMaint.Anchor(9)
+Gui.F_Parts_Insp.cmdMaint.Event(Click,cmdMaint_Click)
+Gui.F_Parts_Insp.cmdMaint.Enabled(True)
+Gui.F_Parts_Insp.cmdMaint.Zorder(0)
+Gui.F_Parts_Insp.cmdMaint.FontName("Tahoma")
+Gui.F_Parts_Insp.cmdMaint.FontSize(8.25)
+Gui.F_Parts_Insp.gsgcReview.Create(GsGridControl)
+Gui.F_Parts_Insp.gsgcReview.Size(14520,7830)
+Gui.F_Parts_Insp.gsgcReview.Position(0,630)
+Gui.F_Parts_Insp.gsgcReview.Anchor(15)
+Gui.F_Parts_Insp.gsgcReview.Event(RowCellClick,gsgcReview_RowCellClick)
+Gui.F_Parts_Insp.gsgcReview.Enabled(False)
+Gui.F_Parts_Insp.gsgcReview.Event(CellValueChanged,gsgcReview_CellValueChanged)
+Gui.F_Parts_Insp.gsgcReview.Visible(True)
+Gui.F_Parts_Insp.gsgcReview.Zorder(0)
+Gui.F_Parts_Insp.cmdExport.Create(Button)
+Gui.F_Parts_Insp.cmdExport.Enabled(False)
+Gui.F_Parts_Insp.cmdExport.Size(1320,420)
+Gui.F_Parts_Insp.cmdExport.Position(13155,105)
+Gui.F_Parts_Insp.cmdExport.Anchor(9)
+Gui.F_Parts_Insp.cmdExport.Caption("Export")
+Gui.F_Parts_Insp.cmdExport.Event(Click,cmdExport_Click)
+Gui.F_Parts_Insp.cmdExport.Visible(True)
+Gui.F_Parts_Insp.cmdExport.Zorder(0)
+Gui.F_Parts_Insp.cmdExport.FontName("Tahoma")
+Gui.F_Parts_Insp.cmdExport.FontSize(8.25)
+Gui.F_Parts_Insp.pbRefresh.Create(ProgressBar)
+Gui.F_Parts_Insp.pbRefresh.Size(3735,255)
+Gui.F_Parts_Insp.pbRefresh.Position(4905,195)
+Gui.F_Parts_Insp.pbRefresh.Visible(False)
+Gui.F_Parts_Insp.lblStatus.Create(Label,"",False,5700,255,0,8715,255,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Parts_Insp.lblStatus.ForeColor(-2147483631)
+Gui.F_Parts_Insp.lblStatus.BorderStyle(0)
+Gui.F_Parts_Insp.timerRefresh.Create(Timer)
+Gui.F_Parts_Insp.timerRefresh.Size(420,360)
+Gui.F_Parts_Insp.timerRefresh.Position(11250,135)
+Gui.F_Parts_Insp.timerRefresh.Interval(60000)
+Gui.F_Parts_Insp.timerRefresh.Event(Timer,timerRefresh_Timer)
+Gui.F_Parts_Insp.timerRefresh.Enabled(False)
+Gui.F_Maintenance..Create(BaseForm)
+Gui.F_Maintenance..Caption("Maintenance")
+Gui.F_Maintenance..Size(7680,6510)
+Gui.F_Maintenance..MinX(0)
+Gui.F_Maintenance..MinY(0)
+Gui.F_Maintenance..Position(0,0)
+Gui.F_Maintenance..BackColor(-2147483633)
+Gui.F_Maintenance..MaxButton(False)
+Gui.F_Maintenance..MousePointer(0)
+Gui.F_Maintenance..Sizeable(False)
+Gui.F_Maintenance..Event(UnLoad,F_Maintenance_UnLoad)
+Gui.F_Maintenance..AlwaysOnTop(False)
+Gui.F_Maintenance..FontName("Tahoma")
+Gui.F_Maintenance..FontSize(8.25)
+Gui.F_Maintenance..ControlBox(True)
+Gui.F_Maintenance..MinButton(True)
+Gui.F_Maintenance..Moveable(True)
+Gui.F_Maintenance..ShowInTaskBar(True)
+Gui.F_Maintenance..TitleBar(True)
+Gui.F_Maintenance.lblWorkdays.Create(Label,"Workdays:",True,1020,255,0,75,135,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Maintenance.lblWorkdays.BorderStyle(0)
+Gui.F_Maintenance.chkSunday.Create(CheckBox)
+Gui.F_Maintenance.chkSunday.Size(990,300)
+Gui.F_Maintenance.chkSunday.Position(120,345)
+Gui.F_Maintenance.chkSunday.Caption("Sunday")
+Gui.F_Maintenance.chkSunday.Enabled(True)
+Gui.F_Maintenance.chkSunday.Visible(True)
+Gui.F_Maintenance.chkSunday.Zorder(0)
+Gui.F_Maintenance.chkSunday.FontName("Tahoma")
+Gui.F_Maintenance.chkSunday.FontSize(8.25)
+Gui.F_Maintenance.chkMonday.Create(CheckBox)
+Gui.F_Maintenance.chkMonday.Size(990,300)
+Gui.F_Maintenance.chkMonday.Position(1125,345)
+Gui.F_Maintenance.chkMonday.Caption("Monday")
+Gui.F_Maintenance.chkMonday.Enabled(True)
+Gui.F_Maintenance.chkMonday.Visible(True)
+Gui.F_Maintenance.chkMonday.Zorder(0)
+Gui.F_Maintenance.chkMonday.FontName("Tahoma")
+Gui.F_Maintenance.chkMonday.FontSize(8.25)
+Gui.F_Maintenance.chkTuesday.Create(CheckBox)
+Gui.F_Maintenance.chkTuesday.Size(1035,300)
+Gui.F_Maintenance.chkTuesday.Position(2130,345)
+Gui.F_Maintenance.chkTuesday.Caption("Tuesday")
+Gui.F_Maintenance.chkTuesday.Enabled(True)
+Gui.F_Maintenance.chkTuesday.Visible(True)
+Gui.F_Maintenance.chkTuesday.Zorder(0)
+Gui.F_Maintenance.chkTuesday.FontName("Tahoma")
+Gui.F_Maintenance.chkTuesday.FontSize(8.25)
+Gui.F_Maintenance.chkWednesday.Create(CheckBox)
+Gui.F_Maintenance.chkWednesday.Size(1305,300)
+Gui.F_Maintenance.chkWednesday.Position(3195,345)
+Gui.F_Maintenance.chkWednesday.Caption("Wednesday")
+Gui.F_Maintenance.chkWednesday.Enabled(True)
+Gui.F_Maintenance.chkWednesday.Visible(True)
+Gui.F_Maintenance.chkWednesday.Zorder(0)
+Gui.F_Maintenance.chkWednesday.FontName("Tahoma")
+Gui.F_Maintenance.chkWednesday.FontSize(8.25)
+Gui.F_Maintenance.chkThursday.Create(CheckBox)
+Gui.F_Maintenance.chkThursday.Size(1125,300)
+Gui.F_Maintenance.chkThursday.Position(4515,345)
+Gui.F_Maintenance.chkThursday.Caption("Thursday")
+Gui.F_Maintenance.chkThursday.Enabled(True)
+Gui.F_Maintenance.chkThursday.Visible(True)
+Gui.F_Maintenance.chkThursday.Zorder(0)
+Gui.F_Maintenance.chkThursday.FontName("Tahoma")
+Gui.F_Maintenance.chkThursday.FontSize(8.25)
+Gui.F_Maintenance.chkFriday.Create(CheckBox)
+Gui.F_Maintenance.chkFriday.Size(915,300)
+Gui.F_Maintenance.chkFriday.Position(5655,345)
+Gui.F_Maintenance.chkFriday.Caption("Friday")
+Gui.F_Maintenance.chkFriday.Enabled(True)
+Gui.F_Maintenance.chkFriday.Visible(True)
+Gui.F_Maintenance.chkFriday.Zorder(0)
+Gui.F_Maintenance.chkFriday.FontName("Tahoma")
+Gui.F_Maintenance.chkFriday.FontSize(8.25)
+Gui.F_Maintenance.chkSaturday.Create(CheckBox)
+Gui.F_Maintenance.chkSaturday.Size(1110,300)
+Gui.F_Maintenance.chkSaturday.Position(6540,345)
+Gui.F_Maintenance.chkSaturday.Caption("Saturday")
+Gui.F_Maintenance.chkSaturday.Enabled(True)
+Gui.F_Maintenance.chkSaturday.Visible(True)
+Gui.F_Maintenance.chkSaturday.Zorder(0)
+Gui.F_Maintenance.chkSaturday.FontName("Tahoma")
+Gui.F_Maintenance.chkSaturday.FontSize(8.25)
+Gui.F_Maintenance.lblDaysIdle.Create(Label,"Days Idle Format:",True,1935,255,0,75,780,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Maintenance.lblDaysIdle.BorderStyle(0)
+Gui.F_Maintenance.lblRedMin.Create(Label,"Red (Greater than ## days)",True,2970,255,0,75,1080,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Maintenance.lblRedMin.BorderStyle(0)
+Gui.F_Maintenance.txtRedMin.Create(TextBox,"",True,765,300,0,3360,1005,True,0,"Arial",8,-2147483643,1)
+Gui.F_Maintenance.txtRedMin.NumericOnly(2)
+Gui.F_Maintenance.txtRedMin.Event(LostFocus,txtRedMin_LostFocus)
+Gui.F_Maintenance.lblYellow.Create(Label,"Yellow (Between ## and ## days inclusive)",True,3285,255,0,75,1425,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Maintenance.lblYellow.BorderStyle(0)
+Gui.F_Maintenance.txtYellowMin.Create(TextBox,"",True,765,300,0,3360,1335,False,0,"Arial",8,-2147483643,1)
+Gui.F_Maintenance.txtYellowMin.NumericOnly(2)
+Gui.F_Maintenance.lblYellowTo.Create(Label,"to",True,270,255,0,4200,1425,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Maintenance.lblYellowTo.BorderStyle(0)
+Gui.F_Maintenance.txtYellowMax.Create(TextBox,"",True,765,300,0,4500,1335,False,0,"Arial",8,-2147483643,1)
+Gui.F_Maintenance.txtYellowMax.NumericOnly(2)
+Gui.F_Maintenance.lblGreenMax.Create(Label,"Green (Less than ## days)",True,1965,210,0,75,1755,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Maintenance.lblGreenMax.BorderStyle(0)
+Gui.F_Maintenance.txtGreenMax.Create(TextBox,"",True,765,300,0,3360,1665,True,0,"Arial",8,-2147483643,1)
+Gui.F_Maintenance.txtGreenMax.NumericOnly(2)
+Gui.F_Maintenance.txtGreenMax.Event(LostFocus,txtGreenMax_LostFocus)
+Gui.F_Maintenance.cmdSave.Create(Button)
+Gui.F_Maintenance.cmdSave.Size(1080,420)
+Gui.F_Maintenance.cmdSave.Position(90,5550)
+Gui.F_Maintenance.cmdSave.Caption("Save")
+Gui.F_Maintenance.cmdSave.Event(Click,cmdSave_Click)
+Gui.F_Maintenance.cmdSave.Enabled(True)
+Gui.F_Maintenance.cmdSave.Visible(True)
+Gui.F_Maintenance.cmdSave.Zorder(0)
+Gui.F_Maintenance.cmdSave.FontName("Tahoma")
+Gui.F_Maintenance.cmdSave.FontSize(8.25)
+Gui.F_Maintenance.txtJobExcl.Create(TextboxM)
+Gui.F_Maintenance.txtJobExcl.Enabled(True)
+Gui.F_Maintenance.txtJobExcl.Visible(True)
+Gui.F_Maintenance.txtJobExcl.Zorder(0)
+Gui.F_Maintenance.txtJobExcl.Size(7395,2325)
+Gui.F_Maintenance.txtJobExcl.Position(120,2445)
+Gui.F_Maintenance.txtJobExcl.FontName("Tahoma")
+Gui.F_Maintenance.txtJobExcl.FontSize(8.25)
+Gui.F_Maintenance.lblJobExcl.Create(Label,"Job Exclusion Filters (No Spaces, separate filters with ';')",True,4125,210,0,180,2145,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Maintenance.lblJobExcl.BorderStyle(0)
+Gui.F_Maintenance.lblJobType.Create(Label,"Job Type Exclusions (No spaces, separate filters with ';')",True,4050,195,0,210,4830,True,0,"Tahoma",8,,0,0)
+Gui.F_Maintenance.lblJobType.BorderStyle(0)
+Gui.F_Maintenance.txtJobType.Create(TextBox,"",True,7410,300,0,120,5115,True,0,"Tahoma",8.25,,1)
+Gui.F_Filter_Name..Create(BaseForm)
+Gui.F_Filter_Name..Caption("Filter Name")
+Gui.F_Filter_Name..Size(3705,1440)
+Gui.F_Filter_Name..MinX(0)
+Gui.F_Filter_Name..MinY(0)
+Gui.F_Filter_Name..Position(0,0)
+Gui.F_Filter_Name..BackColor(-2147483633)
+Gui.F_Filter_Name..ControlBox(False)
+Gui.F_Filter_Name..MaxButton(False)
+Gui.F_Filter_Name..MousePointer(0)
+Gui.F_Filter_Name..Sizeable(False)
+Gui.F_Filter_Name..AlwaysOnTop(False)
+Gui.F_Filter_Name..FontName("Tahoma")
+Gui.F_Filter_Name..FontSize(8.25)
+Gui.F_Filter_Name..MinButton(True)
+Gui.F_Filter_Name..Moveable(True)
+Gui.F_Filter_Name..ShowInTaskBar(True)
+Gui.F_Filter_Name..TitleBar(True)
+Gui.F_Filter_Name.txtFilterName.Create(TextBox,"",True,3300,300,0,135,105,True,0,"Arial",8,-2147483643,1)
+Gui.F_Filter_Name.cmdSaveFilter.Create(Button)
+Gui.F_Filter_Name.cmdSaveFilter.Size(855,375)
+Gui.F_Filter_Name.cmdSaveFilter.Position(195,585)
+Gui.F_Filter_Name.cmdSaveFilter.Caption("Save")
+Gui.F_Filter_Name.cmdSaveFilter.Event(Click,cmdSaveFilter_Click)
+Gui.F_Filter_Name.cmdSaveFilter.Enabled(True)
+Gui.F_Filter_Name.cmdSaveFilter.Visible(True)
+Gui.F_Filter_Name.cmdSaveFilter.Zorder(0)
+Gui.F_Filter_Name.cmdSaveFilter.FontName("Tahoma")
+Gui.F_Filter_Name.cmdSaveFilter.FontSize(8.25)
+Gui.F_Filter_Name.cmdCancelFilter.Create(Button)
+Gui.F_Filter_Name.cmdCancelFilter.Size(855,375)
+Gui.F_Filter_Name.cmdCancelFilter.Position(2490,585)
+Gui.F_Filter_Name.cmdCancelFilter.Caption("Cancel")
+Gui.F_Filter_Name.cmdCancelFilter.Event(Click,cmdCancelFilter_Click)
+Gui.F_Filter_Name.cmdCancelFilter.Enabled(True)
+Gui.F_Filter_Name.cmdCancelFilter.Visible(True)
+Gui.F_Filter_Name.cmdCancelFilter.Zorder(0)
+Gui.F_Filter_Name.cmdCancelFilter.FontName("Tahoma")
+Gui.F_Filter_Name.cmdCancelFilter.FontSize(8.25)
+Gui.F_Font..Create(BaseForm)
+Gui.F_Font..Caption("Set Font Size")
+Gui.F_Font..Size(3720,1200)
+Gui.F_Font..MinX(0)
+Gui.F_Font..MinY(0)
+Gui.F_Font..Position(0,0)
+Gui.F_Font..BackColor(-2147483633)
+Gui.F_Font..MousePointer(0)
+Gui.F_Font..Event(UnLoad,F_Font_UnLoad)
+Gui.F_Font..MaxButton(False)
+Gui.F_Font..Sizeable(False)
+Gui.F_Font..AlwaysOnTop(False)
+Gui.F_Font..FontName("Tahoma")
+Gui.F_Font..FontSize(8.25)
+Gui.F_Font..ControlBox(True)
+Gui.F_Font..MinButton(True)
+Gui.F_Font..Moveable(True)
+Gui.F_Font..ShowInTaskBar(True)
+Gui.F_Font..TitleBar(True)
+Gui.F_Font.txtFont.Create(TextBox,"12",True,975,300,0,75,75,True,1,"Arial",8,-2147483643,1)
+Gui.F_Font.txtFont.TabStop(True)
+Gui.F_Font.txtFont.TabIndex(1)
+Gui.F_Font.txtFont.NumericOnly(2)
+Gui.F_Font.cmdPlus.Create(Button)
+Gui.F_Font.cmdPlus.Size(345,345)
+Gui.F_Font.cmdPlus.Position(1140,60)
+Gui.F_Font.cmdPlus.Caption("+")
+Gui.F_Font.cmdPlus.Event(Click,cmdPlus_Click)
+Gui.F_Font.cmdPlus.Enabled(True)
+Gui.F_Font.cmdPlus.Visible(True)
+Gui.F_Font.cmdPlus.Zorder(0)
+Gui.F_Font.cmdPlus.FontName("Tahoma")
+Gui.F_Font.cmdPlus.FontSize(8.25)
+Gui.F_Font.cmdMinus.Create(Button)
+Gui.F_Font.cmdMinus.Size(345,345)
+Gui.F_Font.cmdMinus.Position(1575,60)
+Gui.F_Font.cmdMinus.Caption("-")
+Gui.F_Font.cmdMinus.Event(Click,cmdMinus_Click)
+Gui.F_Font.cmdMinus.Enabled(True)
+Gui.F_Font.cmdMinus.Visible(True)
+Gui.F_Font.cmdMinus.Zorder(0)
+Gui.F_Font.cmdMinus.FontName("Tahoma")
+Gui.F_Font.cmdMinus.FontSize(8.25)
+Gui.F_Font.cmdUpdate.Create(Button)
+Gui.F_Font.cmdUpdate.Size(855,375)
+Gui.F_Font.cmdUpdate.Position(135,435)
+Gui.F_Font.cmdUpdate.TabStop(True)
+Gui.F_Font.cmdUpdate.TabIndex(2)
+Gui.F_Font.cmdUpdate.Caption("Update")
+Gui.F_Font.cmdUpdate.Event(Click,cmdUpdate_Click)
+Gui.F_Font.cmdUpdate.Enabled(True)
+Gui.F_Font.cmdUpdate.Visible(True)
+Gui.F_Font.cmdUpdate.Zorder(0)
+Gui.F_Font.cmdUpdate.FontName("Tahoma")
+Gui.F_Font.cmdUpdate.FontSize(8.25)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.bSUPERVSR.Declare(Boolean,False)
+V.Global.bConnection.Declare
+V.Global.iTimer.Declare(Long,60000)
+V.Global.iFont.Declare
+V.Global.iFilterID.Declare
+V.Global.iFilterID.Set(-1)
+V.Global.dCutOff.Declare
+Program.External.Include.Library("300010.lib")
+Program.External.Include.Library("450000.lib")
+Program.External.Include.Library("175200.lib")
+v.Global.bIsLoading.Declare
+v.Global.bPassedFirstLoad.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Author: Bix
+'Date Mar 26 2019
+'GCG_PO_Job_Consolidated_Dashboard.g2u
+'Dashboard for Parts in inspection from PO and Jobs
+V.Local.sError.Declare
+V.Local.sSQL.Declare
+F.Intrinsic.Control.Try
+
+Gui.F_Parts_Insp.gsgcReview.Enabled(True)
+
+F.Intrinsic.Control.If(V.Caller.User,=,"SUPERVSR")
+	V.Global.bSUPERVSR.Set(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Global.bSUPERVSR)
+	Gui.F_Parts_Insp.cmdMaint.Visible(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("select FONT from GCG_5486_FONT where USER_ID = '{0}';",V.Caller.User,V.Local.sSQL)
+F.ODBC.Connection!con.OpenCompanyConnection
+V.Global.bConnection.Set(True)
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF.Not)
+	'Font exists, set global Variable
+	V.Global.iFont.Set(V.Local.sSQL)
+F.Intrinsic.Control.Else
+	'Font does not exist, set it and Global variable to default
+	V.Global.iFont.Set(8)
+	F.Intrinsic.String.Build("insert into GCG_5486_FONT (USER_ID, FONT) values ('{0}', {1});",V.Caller.User,V.Global.iFont,V.Local.sSQL)
+	F.ODBC.Connection!con.Execute(V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+V.Global.bConnection.Set(False)
+F.ODBC.Connection!con.Close
+
+Gui.F_Parts_Insp..ContextMenuCreate("cxtF_Parts_Insp")
+Gui.F_Parts_Insp..ContextMenuAddItem("cxtF_Parts_Insp","SaveFilter",0,"Save Filter")
+Gui.F_Parts_Insp..ContextMenuSetItemEventHandler("cxtF_Parts_Insp","SaveFilter",SaveFilter)
+Gui.F_Parts_Insp..ContextMenuAddItem("cxtF_Parts_Insp","OpenFilter",0,"Open Filter")
+Gui.F_Parts_Insp..ContextMenuSetItemEventHandler("cxtF_Parts_Insp","OpenFilter",OpenFilter)
+Gui.F_Parts_Insp..ContextMenuAddItem("cxtF_Parts_Insp","ClearFilter",0,"Clear Filter")
+Gui.F_Parts_Insp..ContextMenuSetItemEventHandler("cxtF_Parts_Insp","ClearFilter",ClearFilter)
+Gui.F_Parts_Insp..ContextMenuAddItem("cxtF_Parts_Insp","DeleteFilter",0,"Delete Filter")
+Gui.F_Parts_Insp..ContextMenuSetItemEventHandler("cxtF_Parts_Insp","DeleteFilter",DeleteFilter)
+Gui.F_Parts_Insp..ContextMenuAddItem("cxtF_Parts_Insp","SetFontSize",0,"Set Font Size")
+Gui.F_Parts_Insp..ContextMenuSetItemEventHandler("cxtF_Parts_Insp","SetFontSize",SetFontSize)
+Gui.F_Parts_Insp.gsgcReview.ContextMenuAttach("cxtF_Parts_Insp")
+
+F.Intrinsic.Control.CallSub(PopulateMaintenanceScreen)
+
+Gui.F_Parts_Insp..Show
+
+F.Intrinsic.Control.CallSub(cmdRefresh_Click)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.F_Parts_Insp_UnLoad.Start
+V.Local.sError.Declare
+V.Local.sSQL.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Screen.F_Parts_Insp!gsgcReview.Enabled)
+	F.Intrinsic.Control.CallSub(Serialize)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.DataTable.dtInspQual.Exists)
+	F.Data.DataTable.Close("dtInspQual")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Global.bConnection)
+	F.ODBC.Connection!con.Close
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("update GCG_5486_FONT set FONT = {0} where USER_ID = '{1}';",V.Global.iFont.String,V.Caller.User,V.Local.sSQL)
+F.ODBC.Connection!con.OpenCompanyConnection
+F.ODBC.Connection!con.Execute(V.Local.sSQL)
+F.ODBC.Connection!con.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.F_Parts_Insp_UnLoad.End
+
+Program.Sub.txtRefreshLen_LostFocus.Start
+V.Local.sError.Declare
+V.Local.iTimer.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Screen.F_Parts_Insp!txtRefreshLen.Text,<,1)
+	Gui.F_Parts_Insp.txtRefreshLen.Text("1")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Math.Mult(V.Screen.F_Parts_Insp!txtRefreshLen.Text,60000,V.Local.iTimer)
+Gui.F_Parts_Insp.timerRefresh.Interval(V.Local.iTimer)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtRefreshLen_LostFocus.End
+
+Program.Sub.chkAutoRefresh_Click.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+Gui.F_Parts_Insp.txtRefreshLen.Enabled(V.Screen.F_Parts_Insp!chkAutoRefresh.CheckedAsBoolean)
+Gui.F_Parts_Insp.timerRefresh.Enabled(V.Screen.F_Parts_Insp!chkAutoRefresh.CheckedAsBoolean)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.chkAutoRefresh_Click.End
+
+Program.Sub.timerRefresh_Timer.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Screen.F_Parts_Insp!pbRefresh.Visible)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(cmdRefresh_Click)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.timerRefresh_Timer.End
+
+Program.Sub.GetDataTable.Start
+V.Local.sError.Declare
+V.Local.sFilter.Declare
+V.Local.sRows.Declare
+V.Local.sRow.Declare
+V.Local.iPO.Declare
+V.Local.iJob.Declare
+V.Local.iCnt.Declare
+V.Local.iDays.Declare
+V.Local.iWorkdayMask.Declare(Long,0)
+V.Local.dRecd.Declare
+V.Local.dDue.Declare
+V.Local.fQty.Declare
+V.Local.bPONotes.Declare
+V.Local.bWONotes.Declare
+V.Local.sJobs.Declare
+V.Local.sSQL.Declare
+V.Local.dOneYearAgo.Declare
+V.Local.sJobExcl.Declare
+V.Local.sJobTypeExcl.Declare
+v.Local.sRet.Declare
+
+F.Intrinsic.Control.Try
+
+V.Local.sSQL.Set("select JOB, SUFFIX, JOB+SUFFIX as WO, PRIORITY, rtrim(PART) as PART, LOCATION, rtrim(DESCRIPTION) as DESCRIPTION, year(DATE_DUE) as YEAR_DUE, month(DATE_DUE) as MONTH_DUE, day(DATE_DUE) as DAY_DUE, year(DATE_OPENED) as YEAR_RECD, month(DATE_OPENED) as MONTH_RECD, day(DATE_OPENED) as DAY_RECD, QTY_ORDER as QTY_RUN, PROJECT, QTY_ORDER + QTY_COMPLETED as QTY_ORDER, DATE_CLOSED, CODE_SORT, if(SALES_ORDER = '0000000', '', SALES_ORDER) as SO, if(SALES_ORDER = '0000000', '', SALES_ORDER_LINE + '0') as SO_LINE from V_JOB_HEADER where QTY_ORDER > 0 and DATE_CLOSED = '1900-01-01'")
+F.Global.Registry.ReadValue(-1,V.Caller.CompanyCode,"PO and Job Consolidated Dashboard",5486,2000,6,"",V.Local.sJobExcl)
+F.Intrinsic.Control.If(V.Local.sJobExcl,<>,"")
+	F.Intrinsic.String.Replace(V.Local.sJobExcl,";","' and JOB not like '",V.Local.sJobExcl)
+	F.Intrinsic.String.Build("{0} and JOB not like '{1}'",V.Local.sSQL,V.Local.sJobExcl,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.Global.Registry.ReadValue(-1,V.Caller.CompanyCode,"PO and Job Consolidated Dashboard",5486,3000,6,"",V.Local.sJobTypeExcl)
+F.Intrinsic.Control.If(V.Local.sJobTypeExcl,<>,"")
+	F.Intrinsic.String.Replace(V.Local.sJobTypeExcl,";","','",V.Local.sJobTypeExcl)
+	F.Intrinsic.String.Build("{0} and JOB_TYPE not in ('{1}')",V.Local.sSQL,V.Local.sJobTypeExcl,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("{0};",V.Local.sSQL,V.Local.sSQL)
+F.Intrinsic.Date.DateAdd("M",-1,V.Ambient.Date,V.Local.dOneYearAgo)
+F.ODBC.Connection!con.OpenCompanyConnection(1000)
+V.Global.bConnection.Set(True)
+F.Data.DataTable.CreateFromSQL("dtJob","con",V.Local.sSQL,True)
+F.Data.DataTable.ColumnToString("dtJob","WO",V.Local.sJobs)
+F.Intrinsic.String.Replace(V.Local.sJobs,"*!*","','",V.Local.sJobs)
+F.Data.DataTable.CreateFromSQL("dtPurchLine","con","select rtrim(A.PART) as PART, A.LOCATION, rtrim(A.DESCRIPTION) as DESCRIPTION, year(A.DATE_DUE_LINE) as YEAR_DUE, month(A.DATE_DUE_LINE) as MONTH_DUE, day(A.DATE_DUE_LINE) as DAY_DUE, year(A.DATE_LAST_RECEIVED) as YEAR_RECD, month(A.DATE_LAST_RECEIVED) as MONTH_RECD, day(A.DATE_LAST_RECEIVED) as DAY_RECD, A.PURCHASE_ORDER, left(A.RECORD_NO,3) as PO_LINE, A.QTY_RECD_NOT_INSP, A.QTY_REJECT, A.QTY_ORDER, A.JOB, A.SUFFIX from V_PO_LINES A where A.QTY_RECEIVED < A.QTY_ORDER;",True)
+
+''''Old version''''
+'F.Intrinsic.String.Build("select JOB, SUFFIX, SEQ, cast(SEQ as int) as SEQ_NUM, rtrim(PART) as WC, rtrim(DESCRIPTION) as WC_DESC, year(DATE_DUE) as YEAR_DUE, month(DATE_DUE) as MONTH_DUE, day(DATE_DUE) as DAY_DUE, FLAG_CLOSED, LMO, year(DATE_COMPLETED) as YEAR_CLOSED, month(DATE_COMPLETED) as MONTH_CLOSED, day(DATE_COMPLETED) as DAY_CLOSED, UNITS_OPEN as QTY_ORDER, DATE_START, if(LMO = 'M', HOURS_ESTIMATED - HOURS_ACTUAL, 0) as OPEN_QTY, LOCN as LOCATION from V_JOB_OPERATIONS where SEQ < '995000' and JOB+SUFFIX in ('{0}') and LMO in ('L', 'M');",V.Local.sJobs,V.Local.sSQL)
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'BN Jan 1 2022, run this query will save 50 secs
+v.Local.sSQL.Set("Select o.job,o.Suffix,o.seq,cast(o.SEQ as int) as SEQ_NUM ,rtrim(o.PART) as WC,rtrim(o.DESCRIPTION) as WC_DESC, year(o.DATE_DUE) as YEAR_DUE, month(o.DATE_DUE) as MONTH_DUE, day(o.DATE_DUE) as DAY_DUE, o.FLAG_CLOSED, o.LMO, year(o.DATE_COMPLETED) as YEAR_CLOSED, month(o.DATE_COMPLETED) as MONTH_CLOSED, day(o.DATE_COMPLETED) as DAY_CLOSED, o.UNITS_OPEN as QTY_ORDER, o.DATE_START, if(o.LMO = 'M', o.HOURS_ESTIMATED - o.HOURS_ACTUAL, 0) as OPEN_QTY, o.LOCN as LOCATION from V_JOB_HEADER h left join v_job_operations o on h.Job = o.Job and h.Suffix = o.Suffix where  h.QTY_ORDER > 0 and h.DATE_CLOSED = '1900-01-01' and LMO in ('L', 'M') and SEQ < '995000'")
+F.Intrinsic.Control.If(V.Local.sJobExcl,<>,"")
+	F.Intrinsic.String.Replace(v.Local.sJobExcl," JOB "," h.JOB ",V.Local.sJobExcl)
+	F.Intrinsic.String.Build("{0} and h.JOB not like '{1}'",V.Local.sSQL,V.Local.sJobExcl,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.sJobTypeExcl,<>,"")
+	F.Intrinsic.String.Build("{0} and h.JOB_TYPE not in ('{1}')",V.Local.sSQL,V.Local.sJobTypeExcl,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("{0};",V.Local.sSQL,V.Local.sSQL)
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+F.Data.DataTable.CreateFromSQL("dtJobOp","con",V.Local.sSQL,True)
+'''Old version'''
+'F.Intrinsic.String.Build("select JOB, SUFFIX, SEQ, max(DATE_SEQUENCE) as LAST_TRANS from V_JOB_DETAIL where DATE_SEQUENCE between '{1}' and '{2}' and LMO = 'L' group by JOB, SUFFIX, SEQ",V.Local.sJobs,V.Local.dOneYearAgo.PervasiveDate,V.Ambient.Date.PervasiveDate,V.Local.sSQL)
+
+
+'BN Jan 1 2021, run this query will save 15 sec
+f.Intrinsic.String.Build("select o.JOB, o.SUFFIX, o.SEQ, max(o.DATE_SEQUENCE) as LAST_TRANS from V_JOB_HEADER h left join v_job_detail o on h.Job = o.Job and h.Suffix = o.Suffix where  h.QTY_ORDER > 0 and h.DATE_CLOSED = '1900-01-01' and (o.DATE_SEQUENCE between '{0}' and '{1}') and o.LMO = 'L'",V.Local.dOneYearAgo.PervasiveDate,V.Ambient.Date.PervasiveDate,V.Local.sSQL)
+F.Intrinsic.Control.If(V.Local.sJobExcl,<>,"")
+	F.Intrinsic.String.Build("{0} and h.JOB not like '{1}'",V.Local.sSQL,V.Local.sJobExcl,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.sJobTypeExcl,<>,"")
+	F.Intrinsic.String.Build("{0} and h.JOB_TYPE not in ('{1}')",V.Local.sSQL,V.Local.sJobTypeExcl,V.Local.sSQL)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("{0} group by o.JOB, o.SUFFIX, o.SEQ;",V.Local.sSQL,V.Local.sSQL)
+'''''''''''''''''''''''''''''''''''''''''''
+
+F.Data.DataTable.CreateFromSQL("dtJobLastTransaction","con",V.Local.sSQL,True)
+'F.Data.Linq.Join("LeftJoin","DataTable","dtJobDetailDates*!*DETAIL1","DataTable","dtJobDetailDates*!*DETAIL2","DETAIL1.JOB = DETAIL2.JOB and DETAIL1.SUFFIX = DETAIL2.SUFFIX and DETAIL1.SEQ = DETAIL2.SEQ","DETAIL1.JOB*!*DETAIL1.SUFFIX*!*DETAIL1.SEQ*!*max(DETAIL1.DATE_SEQUENCE) as LAST_TRANS","","","DETAIL1.JOB,DETAIL1.SUFFIX,DETAIL1.SEQ","dtJobLastTransaction",True)
+'F.Data.DataTable.Close("dtJobDetailDates")
+'F.Data.DataTable.CreateFromSQL("dtJobOpenMat","con","select JOB, SUFFIX, count(SEQ) as OPEN_MAT from V_JOB_OPERATIONS where LMO = 'M' and SEQ < '995000' and DATE_COMPLETED = '1900-01-01' group by JOB, SUFFIX;")
+F.Data.Linq.Join("LeftJoin","DataTable","dtJobOp*!*OPER1","DataTable","dtJobOp*!*OPER2","OPER1.JOB = OPER2.JOB and OPER1.SUFFIX = OPER2.SUFFIX and OPER1.SEQ = OPER2.SEQ","OPER1.JOB*!*OPER1.SUFFIX*!*count() as OPEN_MAT","OPER1.LMO = 'M' and OPER1.YEAR_CLOSED = 1900 and OPER1.MONTH_CLOSED = 1 and OPER1.DAY_CLOSED = 1","OPER1.JOB,OPER1.SUFFIX",,"dtJobOpenMat",False)
+'F.Data.DataTable.CreateFromSQL("dtJobOpenLab","con","select JOB, SUFFIX, SEQ, rtrim(PART) as WC from V_JOB_OPERATIONS where LMO = 'L' and SEQ < '995000' and DATE_COMPLETED = '1900-01-01';")
+F.Data.DataView.Create("dtJobOp","dvOpenLab")
+F.Data.DataView.SetFilter("dtJobOp","dvOpenLab","[LMO] = 'L' and [YEAR_CLOSED] = 1900 and [MONTH_CLOSED] = 1 and [DAY_CLOSED] = 1")
+F.Data.DataView.ToDataTable("dtJobOp","dvOpenLab","dtJobOpenLab",False)
+F.Data.DataView.Close("dtJobOp","dvOpenLab")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","SEQ_NUM")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","WC_DESC")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","YEAR_DUE")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","MONTH_DUE")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","DAY_DUE")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","FLAG_CLOSED")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","LMO")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","YEAR_CLOSED")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","MONTH_CLOSED")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","DAY_CLOSED")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","QTY_ORDER")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","DATE_START")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","OPEN_QTY")
+F.Data.DataTable.RemoveColumn("dtJobOpenLab","LOCATION")
+'F.Data.DataTable.CreateFromSQL("dtJob","con","select distinct JOB, SUFFIX, PRIORITY, rtrim(PART) as PART, LOCATION, rtrim(DESCRIPTION) as DESCRIPTION, year(DATE_DUE) as YEAR_DUE, month(DATE_DUE) as MONTH_DUE, day(DATE_DUE) as DAY_DUE, year(DATE_OPENED) as YEAR_RECD, month(DATE_OPENED) as MONTH_RECD, day(DATE_OPENED) as DAY_RECD, QTY_ORDER as QTY_RUN, PROJECT, QTY_ORDER + QTY_COMPLETED as QTY_ORDER, DATE_CLOSED, CODE_SORT from V_JOB_HEADER where QTY_ORDER > 0;",True)
+F.Data.DataTable.CreateFromSQL("dtJobInd","con","select distinct JOB, SUFFIX, INDIRECT_GL_ACCT from IND_LBR_ACCTS where INDIRECT_GL_ACCT <> '';",True)
+F.Data.DataTable.CreateFromSQL("dtQualPurch","con","select PURCHASE_ORDER, left(PO_LINE,3) as PO_LINE, QTY_REMAINING as QTY_REJECTED from V_QUALITY where PURCHASE_ORDER <> '0000000' and PO_LINE <> '0000' and QTY_REMAINING <> 0 order by DATE_ENTERED desc, TIME_ENTERED desc;",True)
+F.Data.DataTable.CreateFromSQL("dtQualJob","con","select JOB, SUFFIX, QTY_REMAINING as QTY_REJECTED from V_QUALITY where JOB <> '' and SEQUENCE <> '000000' and QTY_REMAINING <> 0 order by DATE_ENTERED desc, TIME_ENTERED desc;",True)
+F.Data.DataTable.CreateFromSQL("dtPurch","con","select PURCHASE_ORDER, BUYER, VENDOR, year(DATE_ORDER) as YEAR_RECD, month(DATE_ORDER) as MONTH_RECD, day(DATE_ORDER) as DAY_RECD, FLAG_RECV_CLOSED from V_PO_HEADER;",True)
+F.Data.DataTable.CreateFromSQL("dtVendor","con","select VENDOR, rtrim(NAME_VENDOR) as NAME_VENDOR from V_VENDOR_MASTER;",True)
+F.Data.DataTable.CreateFromSQL("dtBuyer","con","select BUYER_CODE, rtrim(BUYER) as BUYER from V_BUYERS;",True)
+F.Data.DataTable.CreateFromSQL("dtPOWO","con","select PO, left(PO_LINE, 3) as PO_LINE, WO, WO_SUFF from V_PO_WO_XREF;",True)
+F.Data.DataTable.CreateFromSQL("dtInvMstr","con","select rtrim(PART) as PART, LOCATION, CODE_SORT, QTY_ONHAND, rtrim(TEXT_INFO1) as TEXT_INFO1, rtrim(TEXT_INFO2) as TEXT_INFO2 from V_INVENTORY_ALL;",True)
+F.Data.DataTable.CreateFromSQL("dtJobFields","con","select JOB, SUFFIX, SEQ, rtrim(SEQ_PRIORITY) as SEQ_PRIORITY, rtrim(SEQ_NOTES) as SEQ_NOTES from GCG_5486_JOB_FIELDS;",True)
+F.ODBC.Connection!con.TableExists("GAB_4163_PO_NOTES",V.Local.bPONotes)
+F.Intrinsic.Control.If(V.Local.bPONotes)
+	'Old version
+	'F.Data.DataTable.CreateFromSQL("dtPONotes","con","select PO, POLINE, rtrim(NOTES) as NOTES from GAB_4163_PO_NOTES;",True)
+	'BN, Jan 5 2022 Run this will be faster
+	F.Data.DataTable.CreateFromSQL("dtPONotes","con","select PO, POLINE, rtrim(NOTES) as NOTES from GAB_4163_PO_NOTES n left join V_PO_LINES p on n.PO = p.Purchase_Order and n.POLine = left(p.RECORD_NO,3) where QTY_RECEIVED < QTY_ORDER;",True)
+F.Intrinsic.Control.Else
+	F.Data.DataTable.Create("dtPONotes",True)
+	F.Data.DataTable.AddColumn("dtPONotes","PO","String")
+	F.Data.DataTable.AddColumn("dtPONotes","POLINE","String")
+	F.Data.DataTable.AddColumn("dtPONotes","NOTES","String")
+F.Intrinsic.Control.EndIf
+F.ODBC.Connection!con.TableExists("GAB_4169_WO_NOTES",V.Local.bWONotes)
+F.Intrinsic.Control.If(V.Local.bWONotes)
+	'Old version
+	'F.Data.DataTable.CreateFromSQL("dtWONotes","con","select JOB, SUFFIX, rtrim(NOTES) as NOTES from GAB_4169_WO_NOTES;",True)
+	'BN, Jan 5 2022 Run this will be faster
+	F.Data.DataTable.CreateFromSQL("dtWONotes","con","select n.JOB, n.SUFFIX, rtrim(n.NOTES) as NOTES from GAB_4169_WO_NOTES n left join v_Job_Header h on n.Job = h.Job and n.Suffix = h.Suffix where h.QTY_ORDER > 0 and h.DATE_CLOSED = '1900-01-01'",True)
+F.Intrinsic.Control.Else
+	F.Data.DataTable.Create("dtWONotes",True)
+	F.Data.DataTable.AddColumn("dtWONotes","JOB","String")
+	F.Data.DataTable.AddColumn("dtWONotes","SUFFIX","String")
+	F.Data.DataTable.AddColumn("dtWONotes","NOTES","String")
+F.Intrinsic.Control.EndIf
+V.Global.bConnection.Set(False)
+F.ODBC.Connection!con.Close
+
+'NEW - first i want to calculate the next labor sequence for each job
+F.Data.Linq.Join("InnerJoin","DataTable","dtJob*!*HEAD","DataTable","dtJobOpenLab*!*LABOR","HEAD.JOB = LABOR.JOB and HEAD.SUFFIX = LABOR.SUFFIX","HEAD.JOB*!*HEAD.SUFFIX*!*Min(LABOR.SEQ) as CURR_SEQ","","HEAD.JOB,HEAD.SUFFIX","","dtJobCurrL",False)
+F.Data.Linq.Join("InnerJoin","DataTable","dtJobCurrL*!*CURR","DataTable","dtJobOpenLab*!*NEXT","CURR.JOB = NEXT.JOB and CURR.SUFFIX = NEXT.SUFFIX","CURR.JOB*!*CURR.SUFFIX*!*CURR.CURR_SEQ*!*NEXT.SEQ","","","","dtCurrBuff",False)
+F.Data.DataTable.AddExpressionColumn("dtCurrBuff","SEQCHECK","Boolean","[SEQ] > [CURR_SEQ]")
+F.Data.Linq.Join("LeftJoin","DataTable","dtJobCurrL*!*CURR","DataTable","dtCurrBuff*!*NEXT","CURR.JOB = NEXT.JOB and CURR.SUFFIX = NEXT.SUFFIX and CURR.CURR_SEQ = NEXT.CURR_SEQ","CURR.JOB*!*CURR.SUFFIX*!*CURR.CURR_SEQ*!*min(NEXT.SEQ) as NEXTSEQ","NEXT.SEQCHECK = True","CURR.JOB,CURR.SUFFIX,CURR.CURR_SEQ","","dtCurrAndNextL",True)
+F.Data.DataTable.Close("dtJobCurrL")
+F.Data.DataTable.Close("dtCurrBuff")
+F.Data.DataTable.AddColumn("dtCurrAndNextL","NEXTSEQ_STR","String")
+F.Data.DataTable.SetValueFormat("dtCurrAndNextL",-1,"NEXTSEQ","NEXTSEQ_STR","000000")
+F.Data.DataTable.RemoveColumn("dtCurrAndNextL","NEXTSEQ")
+F.Data.Linq.Join("LeftJoin","DataTable","dtCurrAndNextL*!*MASTER","DataTable","dtJobOpenLab*!*WORK","MASTER.JOB = WORK.JOB and MASTER.SUFFIX = WORK.SUFFIX and MASTER.NEXTSEQ_STR = WORK.SEQ","MASTER.JOB*!*MASTER.SUFFIX*!*MASTER.CURR_SEQ*!*MASTER.NEXTSEQ_STR*!*WORK.WC as NEXTWC","","","","dtCurrAndNextLWC",False)
+F.Data.DataTable.Close("dtCurrAndNextL")
+
+F.Intrinsic.Control.If(V.DataTable.dtPurchLine.RowCount,>,0)
+	'Convert dates in tables
+	F.Data.DataTable.AddExpressionColumn("dtPurchLine","Y_DUE","String","YEAR_DUE")
+	F.Data.DataTable.AddExpressionColumn("dtPurchLine","M_DUE","String","MONTH_DUE")
+	F.Data.DataTable.AddExpressionColumn("dtPurchLine","D_DUE","String","DAY_DUE")
+	F.Data.DataTable.AddExpressionColumn("dtPurchLine","DATE_DUE","String","Y_DUE + IIF(LEN(M_DUE) = 1, '0' + M_DUE, M_DUE) + IIF(LEN(D_DUE) = 1, '0' + D_DUE, D_DUE)")
+	F.Data.DataTable.AddExpressionColumn("dtPurchLine","Y_RECD","String","YEAR_RECD")
+	F.Data.DataTable.AddExpressionColumn("dtPurchLine","M_RECD","String","MONTH_RECD")
+	F.Data.DataTable.AddExpressionColumn("dtPurchLine","D_RECD","String","DAY_RECD")
+	F.Data.DataTable.AddExpressionColumn("dtPurchLine","DATE_RECD","String","Y_RECD + IIF(LEN(M_RECD) = 1, '0' + M_RECD, M_RECD) + IIF(LEN(D_RECD) = 1, '0' + D_RECD, D_RECD)")
+	F.Data.DataTable.AddExpressionColumn("dtPurch","Y_RECD","String","YEAR_RECD")
+	F.Data.DataTable.AddExpressionColumn("dtPurch","M_RECD","String","MONTH_RECD")
+	F.Data.DataTable.AddExpressionColumn("dtPurch","D_RECD","String","DAY_RECD")
+	F.Data.DataTable.AddExpressionColumn("dtPurch","DATE_RECD","String","Y_RECD + IIF(LEN(M_RECD) = 1, '0' + M_RECD, M_RECD) + IIF(LEN(D_RECD) = 1, '0' + D_RECD, D_RECD)")
+	
+	Gui.F_Parts_Insp.pbRefresh.Min(0)
+	Gui.F_Parts_Insp.pbRefresh.Max(100)
+	Gui.F_Parts_Insp.pbRefresh.Scrolling(2)
+	'Sum quantity in quality based on PO and PO Line
+	F.Data.Linq.Join("LeftJoin","DataTable","dtPurchLine*!*LINE","DataTable","dtQualPurch*!*QUAL","LINE.PURCHASE_ORDER = QUAL.PURCHASE_ORDER and LINE.PO_LINE = QUAL.PO_LINE","LINE.PURCHASE_ORDER*!*LINE.PO_LINE*!*Sum(QUAL.QTY_REJECTED) as QTY_REJ_TOT","QUAL.QTY_REJECTED <> 0","LINE.PURCHASE_ORDER,LINE.PO_LINE","","dtQualSum",True)
+	'Construct final PO DT
+	F.Data.Linq.Join("LeftJoin","DataTable","dtPurchLine*!*LINE","DataTable","dtQualSum*!*QUAL","LINE.PURCHASE_ORDER = QUAL.PURCHASE_ORDER and LINE.PO_LINE = QUAL.PO_LINE","DataTable","dtPurch*!*HEAD","LINE.PURCHASE_ORDER = HEAD.PURCHASE_ORDER","DataTable","dtVendor*!*VEND","HEAD.VENDOR = VEND.VENDOR","DataTable","dtBuyer*!*BUYR","HEAD.BUYER = BUYR.BUYER_CODE","DataTable","dtInvMstr*!*MSTR","LINE.PART = MSTR.PART and LINE.LOCATION = MSTR.LOCATION","DataTable","dtPOWO*!*POWO","LINE.PURCHASE_ORDER = POWO.PO and LINE.PO_LINE = POWO.PO_LINE","DataTable","dtJob*!*JOBHEAD","POWO.WO = JOBHEAD.JOB and POWO.WO_SUFF = JOBHEAD.SUFFIX","DataTable","dtPONotes*!*NOTES","LINE.PURCHASE_ORDER = NOTES.PO and LINE.PO_LINE = NOTES.POLINE","DataTable","dtJobOpenMat*!*OPENMAT","POWO.WO = OPENMAT.JOB and POWO.WO_SUFF = OPENMAT.SUFFIX","LINE.PART as Part*!*LINE.LOCATION as Loc*!*LINE.DESCRIPTION as Desc*!*VEND.NAME_VENDOR as Vendor*!*JOBHEAD.PROJECT as Project*!*POWO.WO as Job*!*POWO.WO_SUFF as Suffix*!*JOBHEAD.PRIORITY as Pri*!*JOBHEAD.CODE_SORT as CodeSort*!*BUYR.BUYER as Buyer*!*LINE.DATE_RECD as LineRecd*!*HEAD.DATE_RECD as HeadRecd*!*LINE.DATE_DUE as DateDue*!*LINE.QTY_RECD_NOT_INSP as QtyInsp*!*QUAL.QTY_REJ_TOT as QtyQual*!*NOTES.NOTES as Notes*!*LINE.PURCHASE_ORDER as PO*!*LINE.PO_LINE as POLine*!*MSTR.CODE_SORT as SortCode*!*HEAD.VENDOR as VendorNum*!*LINE.QTY_ORDER as OrderQty*!*MSTR.TEXT_INFO1 as InvMstrInfo1*!*MSTR.TEXT_INFO2 as InvMstrInfo2*!*HEAD.FLAG_RECV_CLOSED*!*OPENMAT.OPEN_MAT","LINE.QTY_RECD_NOT_INSP <> 0 or QUAL.QTY_REJ_TOT <> 0","","","dtPOInspQualUnFiltered",True)
+	F.Data.DataTable.Close("dtQualSum")
+	
+	Gui.F_Parts_Insp.pbRefresh.Scrolling(1)
+	
+	'filter out closed POs
+	F.Data.DataView.Create("dtPOInspQualUnFiltered","dvOpen")
+	F.Data.DataView.SetFilter("dtPOInspQualUnFiltered","dvOpen","[FLAG_RECV_CLOSED] <> 'Y'")
+	F.Data.DataView.ToDataTable("dtPOInspQualUnFiltered","dvOpen","dtPOInspQual",True)
+	F.Data.DataTable.Close("dtPOInspQualUnFiltered")
+	F.Data.DataTable.AddExpressionColumn("dtPOInspQual","DateRecd","String","IIF(LineRecd = '19000101',HeadRecd,LineRecd)")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtJob.RowCount,>,0)
+	'Convert dates in tables
+	F.Data.DataTable.AddExpressionColumn("dtJobOp","Y_DUE","String","YEAR_DUE")
+	F.Data.DataTable.AddExpressionColumn("dtJobOp","M_DUE","String","MONTH_DUE")
+	F.Data.DataTable.AddExpressionColumn("dtJobOp","D_DUE","String","DAY_DUE")
+	F.Data.DataTable.AddExpressionColumn("dtJobOp","DATE_DUE","String","Y_DUE + IIF(LEN(M_DUE) = 1, '0' + M_DUE, M_DUE) + IIF(LEN(D_DUE) = 1, '0' + D_DUE, D_DUE)")
+	F.Data.DataTable.AddExpressionColumn("dtJobOp","Y_CLOSED","String","YEAR_CLOSED")
+	F.Data.DataTable.AddExpressionColumn("dtJobOp","M_CLOSED","String","MONTH_CLOSED")
+	F.Data.DataTable.AddExpressionColumn("dtJobOp","D_CLOSED","String","DAY_CLOSED")
+	F.Data.DataTable.AddExpressionColumn("dtJobOp","DATE_CLOSED","String","Y_CLOSED + IIF(LEN(M_CLOSED) = 1, '0' + M_CLOSED, M_CLOSED) + IIF(LEN(D_CLOSED) = 1, '0' + D_CLOSED, D_CLOSED)")
+	F.Data.DataTable.AddExpressionColumn("dtJob","Y_DUE","String","YEAR_DUE")
+	F.Data.DataTable.AddExpressionColumn("dtJob","M_DUE","String","MONTH_DUE")
+	F.Data.DataTable.AddExpressionColumn("dtJob","D_DUE","String","DAY_DUE")
+	F.Data.DataTable.AddExpressionColumn("dtJob","DATE_DUE","String","Y_DUE + IIF(LEN(M_DUE) = 1, '0' + M_DUE, M_DUE) + IIF(LEN(D_DUE) = 1, '0' + D_DUE, D_DUE)")
+	F.Data.DataTable.AddExpressionColumn("dtJob","Y_RECD","String","YEAR_RECD")
+	F.Data.DataTable.AddExpressionColumn("dtJob","M_RECD","String","MONTH_RECD")
+	F.Data.DataTable.AddExpressionColumn("dtJob","D_RECD","String","DAY_RECD")
+	F.Data.DataTable.AddExpressionColumn("dtJob","DATE_RECD","String","Y_RECD + IIF(LEN(M_RECD) = 1, '0' + M_RECD, M_RECD) + IIF(LEN(D_RECD) = 1, '0' + D_RECD, D_RECD)")
+	
+	Gui.F_Parts_Insp.pbRefresh.Min(0)
+	Gui.F_Parts_Insp.pbRefresh.Max(100)
+	Gui.F_Parts_Insp.pbRefresh.Scrolling(2)
+	F.Data.DataView.Create("dtJobOp","dvOpenSeq",22,"LMO = 'L' and FLAG_CLOSED <> 'Y'","SEQ asc")
+	'Get next open Job Seq for each Job
+	F.Data.Linq.Join("LeftJoin","DataTable","dtJob*!*HEAD","DataView","dtJobOp","dvOpenSeq*!*OPER","HEAD.JOB = OPER.JOB and HEAD.SUFFIX = OPER.SUFFIX","HEAD.JOB*!*HEAD.SUFFIX*!*Min(OPER.SEQ) as MIN_SEQ","OPER.FLAG_CLOSED <> 'Y'","HEAD.JOB,HEAD.SUFFIX","","dtOpenSeq",True)
+	F.Data.DataView.Create("dtJobOp","dvClosedSeq",22,"LMO = 'L' and FLAG_CLOSED = 'Y'","SEQ desc")
+	'Get previous closed Job Seq for each Job
+	F.Data.Linq.Join("LeftJoin","DataTable","dtJob*!*HEAD","DataView","dtJobOp","dvClosedSeq*!*OPER","HEAD.JOB = OPER.JOB and HEAD.SUFFIX = OPER.SUFFIX","HEAD.JOB*!*HEAD.SUFFIX*!*Max(OPER.SEQ) as MAX_SEQ","OPER.FLAG_CLOSED = 'Y'","HEAD.JOB,HEAD.SUFFIX","","dtClosedSeq",True)
+	'Sum quantity in quality based on Job and Suffix
+	F.Data.Linq.Join("LeftJoin","DataTable","dtJob*!*HEAD","DataTable","dtQualJob*!*QUAL","HEAD.JOB = QUAL.JOB and HEAD.SUFFIX = QUAL.SUFFIX","HEAD.JOB*!*HEAD.SUFFIX*!*Sum(QUAL.QTY_REJECTED) as QTY_REJ_TOT","QUAL.QTY_REJECTED <> 0","HEAD.JOB,HEAD.SUFFIX","","dtQualSum",True)
+	'Get % Parts Available
+	F.Data.DataView.Create("dtJobOp","dvMaterial")
+	F.Data.DataView.SetFilter("dtJobOp","dvMaterial","[LMO] = 'M'")
+	F.Data.Linq.Join("LeftJoin","DataView","dtJobOp","dvMaterial*!*OPER","DataTable","dtInvMstr*!*MSTR","OPER.WC = MSTR.PART and OPER.LOCATION = MSTR.LOCATION","OPER.JOB*!*OPER.SUFFIX*!*OPER.SEQ*!*OPER.FLAG_CLOSED*!*MSTR.PART*!*MSTR.LOCATION*!*OPER.OPEN_QTY*!*MSTR.QTY_ONHAND",,,,"dtJobOpM",False)
+	F.Data.DataView.Close("dtJobOp","dvMaterial")
+	F.Data.DataTable.AddExpressionColumn("dtJobOpM","PART_AVAIL","Long","iif([FLAG_CLOSED] <> 'Y', iif([OPEN_QTY] <= isnull([QTY_ONHAND], 0), 1, 0), 1)")
+	F.Data.Linq.Join("InnerJoin","DataTable","dtJobOpM*!*OPM1","DataTable","dtJobOpM*!*OPM2","OPM1.JOB = OPM2.JOB and OPM1.SUFFIX = OPM2.SUFFIX and OPM1.SEQ = OPM2.SEQ","OPM1.JOB*!*OPM1.SUFFIX*!*SUM(OPM1.PART_AVAIL) as PARTS_AVAIL*!*COUNT() as TOTAL_CNT",,"OPM1.JOB,OPM1.SUFFIX",,"dtJobOpMAvail",False)
+	F.Data.DataTable.Close("dtJobOpM")
+	F.Data.DataTable.AddExpressionColumn("dtJobOpMAvail","PartsReady","Float","[PARTS_AVAIL] / [TOTAL_CNT]")
+	'Construct final WO DT
+	F.Data.Linq.Join("LeftJoin","DataTable","dtJob*!*HEAD","DataTable","dtQualSum*!*QUAL","HEAD.JOB = QUAL.JOB and HEAD.SUFFIX = QUAL.SUFFIX","DataTable","dtInvMstr*!*MSTR","HEAD.PART = MSTR.PART and HEAD.LOCATION = MSTR.LOCATION","DataTable","dtWONotes*!*NOTES","HEAD.JOB = NOTES.JOB and HEAD.SUFFIX = NOTES.SUFFIX","DataTable","dtJobInd*!*INDIRECT","HEAD.JOB = INDIRECT.JOB and HEAD.SUFFIX = INDIRECT.SUFFIX","DataTable","dtOpenSeq*!*OPEN_SEQ","HEAD.JOB = OPEN_SEQ.JOB and HEAD.SUFFIX = OPEN_SEQ.SUFFIX","DataTable","dtClosedSeq*!*CLOSED_SEQ","HEAD.JOB = CLOSED_SEQ.JOB and HEAD.SUFFIX = CLOSED_SEQ.SUFFIX","HEAD.PART as Part*!*HEAD.LOCATION as Loc*!*HEAD.DESCRIPTION as Desc*!*HEAD.PROJECT as Project*!*HEAD.JOB as Job*!*HEAD.SUFFIX as Suffix*!*HEAD.PRIORITY as Pri*!*HEAD.CODE_SORT as CodeSort*!*QUAL.QTY_REJ_TOT as QtyQual*!*NOTES.NOTES as Notes*!*MSTR.CODE_SORT as SortCode*!*INDIRECT.INDIRECT_GL_ACCT as Indirect*!*OPEN_SEQ.MIN_SEQ*!*CLOSED_SEQ.MAX_SEQ*!*HEAD.DATE_DUE*!*HEAD.DATE_RECD*!*HEAD.QTY_RUN*!*MSTR.TEXT_INFO1 as InvMstrInfo1*!*MSTR.TEXT_INFO2 as InvMstrInfo2","HEAD.DATE_CLOSED = '1/1/1900'","","","dtJobInspQual_1",True)
+	F.Data.DataTable.AddExpressionColumn("dtJobInspQual_1","MIN_SEQ_STR","String","MIN_SEQ")
+	F.Data.DataTable.AddExpressionColumn("dtJobOp","SEQ_NUM_STR","String","SEQ_NUM")
+	F.Data.Linq.Join("LeftJoin","DataTable","dtJobInspQual_1*!*INSP","DataView","dtJobOp","dvOpenSeq*!*OPER_OPEN","INSP.JOB = OPER_OPEN.JOB and INSP.SUFFIX = OPER_OPEN.SUFFIX and INSP.MIN_SEQ_STR = OPER_OPEN.SEQ_NUM_STR","INSP.Part*!*INSP.Loc*!*INSP.Desc*!*INSP.Project*!*INSP.Job*!*INSP.Suffix*!*INSP.Pri*!*INSP.CodeSort*!*OPER_OPEN.SEQ as Seq*!*OPER_OPEN.DATE_DUE as DateDue*!*INSP.QtyQual*!*INSP.Notes*!*OPER_OPEN.WC*!*OPER_OPEN.WC_DESC as WCDesc*!*INSP.SortCode*!*INSP.Indirect*!*INSP.MAX_SEQ*!*INSP.DATE_DUE*!*INSP.DATE_RECD*!*INSP.QTY_RUN*!*OPER_OPEN.DATE_START*!*INSP.InvMstrInfo1*!*INSP.InvMstrInfo2","","","","dtJobInspQual_2",True)
+	F.Data.DataTable.AddExpressionColumn("dtJobInspQual_2","MAX_SEQ_STR","String","MAX_SEQ")
+	'Edit BixRB 7 Sept 2023 - Add new custom fields
+	F.Data.Linq.Join("LeftJoin","DataTable","dtJobInspQual_2*!*INSP","DataView","dtJobOp","dvClosedSeq*!*OPER_CLOSED","INSP.JOB = OPER_CLOSED.JOB and INSP.SUFFIX = OPER_CLOSED.SUFFIX and INSP.MAX_SEQ_STR = OPER_CLOSED.SEQ_NUM_STR","DataTable","dtJobOpMAvail*!*PARTS_AVAIL","INSP.JOB = PARTS_AVAIL.JOB and INSP.SUFFIX = PARTS_AVAIL.SUFFIX","DataTable","dtJobOpenMat*!*OPENMAT","INSP.JOB = OPENMAT.JOB and INSP.SUFFIX = OPENMAT.SUFFIX","DataTable","dtCurrAndNextLWC*!*NEXT","INSP.JOB = NEXT.JOB and INSP.SUFFIX = NEXT.SUFFIX","DataTable","dtJobFields*!*CUSTOM","INSP.JOB = CUSTOM.JOB and INSP.SUFFIX = CUSTOM.SUFFIX and INSP.SEQ = CUSTOM.SEQ","INSP.Part*!*INSP.Loc*!*INSP.Desc*!*INSP.Project*!*INSP.Job*!*INSP.Suffix*!*INSP.Pri*!*INSP.CodeSort*!*INSP.Seq*!*INSP.DateDue*!*OPER_CLOSED.DATE_CLOSED as DateRecd*!*INSP.QtyQual*!*PARTS_AVAIL.PartsReady*!*INSP.Notes*!*INSP.WC*!*INSP.WCDesc*!*INSP.SortCode*!*INSP.Indirect*!*INSP.DATE_DUE as HeadDueDate*!*INSP.DATE_RECD as HeadDateRecd*!*INSP.QTY_RUN as OrderQty*!*INSP.DATE_START as StartDate*!*INSP.InvMstrInfo1*!*INSP.InvMstrInfo2*!*OPENMAT.OPEN_MAT*!*NEXT.NEXTSEQ_STR*!*NEXT.NEXTWC*!*CUSTOM.SEQ_PRIORITY*!*CUSTOM.SEQ_NOTES","","","","dtJobInspQual",True)
+'	F.Data.Linq.Join("LeftJoin","DataTable","dtJobInspQual_2*!*INSP","DataView","dtJobOp","dvClosedSeq*!*OPER_CLOSED","INSP.JOB = OPER_CLOSED.JOB and INSP.SUFFIX = OPER_CLOSED.SUFFIX and INSP.MAX_SEQ_STR = OPER_CLOSED.SEQ_NUM_STR","DataTable","dtJobOpMAvail*!*PARTS_AVAIL","INSP.JOB = PARTS_AVAIL.JOB and INSP.SUFFIX = PARTS_AVAIL.SUFFIX","DataTable","dtJobOpenMat*!*OPENMAT","INSP.JOB = OPENMAT.JOB and INSP.SUFFIX = OPENMAT.SUFFIX","DataTable","dtCurrAndNextLWC*!*NEXT","INSP.JOB = NEXT.JOB and INSP.SUFFIX = NEXT.SUFFIX","INSP.Part*!*INSP.Loc*!*INSP.Desc*!*INSP.Project*!*INSP.Job*!*INSP.Suffix*!*INSP.Pri*!*INSP.CodeSort*!*INSP.Seq*!*INSP.DateDue*!*OPER_CLOSED.DATE_CLOSED as DateRecd*!*INSP.QtyQual*!*PARTS_AVAIL.PartsReady*!*INSP.Notes*!*INSP.WC*!*INSP.WCDesc*!*INSP.SortCode*!*INSP.Indirect*!*INSP.DATE_DUE as HeadDueDate*!*INSP.DATE_RECD as HeadDateRecd*!*INSP.QTY_RUN as OrderQty*!*INSP.DATE_START as StartDate*!*INSP.InvMstrInfo1*!*INSP.InvMstrInfo2*!*OPENMAT.OPEN_MAT*!*NEXT.NEXTSEQ_STR*!*NEXT.NEXTWC","","","","dtJobInspQual",True)
+'	F.Data.Linq.Join("LeftJoin","DataTable","dtJobInspQual_2*!*INSP","DataView","dtJobOp","dvClosedSeq*!*OPER_CLOSED","INSP.JOB = OPER_CLOSED.JOB and INSP.SUFFIX = OPER_CLOSED.SUFFIX and INSP.MAX_SEQ_STR = OPER_CLOSED.SEQ_NUM_STR","DataTable","dtJobOpMAvail*!*PARTS_AVAIL","INSP.JOB = PARTS_AVAIL.JOB and INSP.SUFFIX = PARTS_AVAIL.SUFFIX","DataTable","dtJobOpenMat*!*OPENMAT","INSP.JOB = OPENMAT.JOB and INSP.SUFFIX = OPENMAT.SUFFIX","INSP.Part*!*INSP.Loc*!*INSP.Desc*!*INSP.Project*!*INSP.Job*!*INSP.Suffix*!*INSP.Pri*!*INSP.CodeSort*!*INSP.Seq*!*INSP.DateDue*!*OPER_CLOSED.DATE_CLOSED as DateRecd*!*INSP.QtyQual*!*PARTS_AVAIL.PartsReady*!*INSP.Notes*!*INSP.WC*!*INSP.WCDesc*!*INSP.SortCode*!*INSP.Indirect*!*INSP.DATE_DUE as HeadDueDate*!*INSP.DATE_RECD as HeadDateRecd*!*INSP.QTY_RUN as OrderQty*!*INSP.DATE_START as StartDate*!*INSP.InvMstrInfo1*!*INSP.InvMstrInfo2*!*OPENMAT.OPEN_MAT","","","","dtJobInspQual",True)
+	F.Data.DataTable.Close("dtOpenSeq")
+	F.Data.DataTable.Close("dtClosedSeq")
+	F.Data.DataTable.Close("dtQualSum")
+	F.Data.DataTable.Close("dtJobInspQual_1")
+	F.Data.DataTable.Close("dtJobInspQual_2")
+	F.Data.DataTable.Close("dtJobOpMAvail")
+	Gui.F_Parts_Insp.pbRefresh.Scrolling(1)
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.Create("dtInspQual",True)
+F.Data.DataTable.AddColumn("dtInspQual","Part","String")
+F.Data.DataTable.AddColumn("dtInspQual","Loc","String")
+F.Data.DataTable.AddColumn("dtInspQual","Desc","String")
+F.Data.DataTable.AddColumn("dtInspQual","Vendor","String","")
+F.Data.DataTable.AddColumn("dtInspQual","VendorNum","String","")
+F.Data.DataTable.AddColumn("dtInspQual","Project","String","")
+F.Data.DataTable.AddColumn("dtInspQual","Job","String","")
+F.Data.DataTable.AddColumn("dtInspQual","Suffix","String","")
+F.Data.DataTable.AddColumn("dtInspQual","Pri","String","")
+F.Data.DataTable.AddColumn("dtInspQual","CodeSort","String","")
+F.Data.DataTable.AddColumn("dtInspQual","Seq","String","")
+F.Data.DataTable.AddColumn("dtInspQual","SEQ_PRIORITY","String","")
+F.Data.DataTable.AddColumn("dtInspQual","SEQ_NOTES","String","")
+F.Data.DataTable.AddColumn("dtInspQual","Buyer","String","")
+F.Data.DataTable.AddColumn("dtInspQual","DateRecd","String")
+F.Data.DataTable.AddColumn("dtInspQual","HeadDateRecd","String","")
+F.Data.DataTable.AddExpressionColumn("dtInspQual","VDateRecd","Date","iif(isnull([DateRecd], '') <> '', convert(substring([DateRecd], 5, 2) + '/' + substring([DateRecd], 7, 2) + '/' + substring([DateRecd], 1, 4), System.DateTime), convert(substring([HeadDateRecd], 5, 2) + '/' + substring([HeadDateRecd], 7, 2) + '/' + substring([HeadDateRecd], 1, 4), System.DateTime))")
+'F.Data.DataTable.AddColumn("dtInspQual","VDateRecd","Date")
+F.Data.DataTable.AddColumn("dtInspQual","DateDue","String")
+F.Data.DataTable.AddColumn("dtInspQual","HeadDueDate","String","")
+F.Data.DataTable.AddExpressionColumn("dtInspQual","VDateDue","Date","iif(isnull([DateDue], '') <> '', convert(substring([DateDue], 5, 2) + '/' + substring([DateDue], 7, 2) + '/' + substring([DateDue], 1, 4), System.DateTime), convert(substring([HeadDueDate], 5, 2) + '/' + substring([HeadDueDate], 7, 2) + '/' + substring([HeadDueDate], 1, 4), System.DateTime))")
+'F.Data.DataTable.AddColumn("dtInspQual","VDateDue","Date")
+F.Data.DataTable.AddColumn("dtInspQual","StartDate","Date")
+F.Data.DataTable.AddColumn("dtInspQual","QtyInsp","Float",0)
+F.Data.DataTable.AddColumn("dtInspQual","QtyQual","Float",0)
+F.Data.DataTable.AddColumn("dtInspQual","PartsReady","Float")
+F.Data.DataTable.AddColumn("dtInspQual","OPEN_MAT","Long")
+F.Data.DataTable.AddColumn("dtInspQual","NEXTSEQ_STR","String")
+F.Data.DataTable.AddColumn("dtInspQual","NEXTWC","String")
+F.Data.DataTable.AddColumn("dtInspQual","Notes","String","")
+F.Data.DataTable.AddColumn("dtInspQual","PO","String","")
+F.Data.DataTable.AddExpressionColumn("dtInspQual","VStartDate","Date","iif(isnull([PO], '') = '', [StartDate], [VDateDue])")
+F.Data.DataTable.AddColumn("dtInspQual","POLine","String","")
+F.Data.DataTable.AddColumn("dtInspQual","WC","String","")
+F.Data.DataTable.AddColumn("dtInspQual","WCDesc","String","")
+F.Data.DataTable.AddColumn("dtInspQual","SortCode","String","")
+F.Data.DataTable.AddColumn("dtInspQual","InvMstrInfo1","String","")
+F.Data.DataTable.AddColumn("dtInspQual","InvMstrInfo2","String","")
+'F.Intrinsic.String.Build("convert(iif({1} < 3, 365*({0} - 1) + ({0} - 1)/4 - ({0} - 1)/100 + ({0} - 1)/400 + (153*({1} + 12) - 457)/5, 365*{0} + {0}/4 - {0}/100 + {0}/400 + (153*{1} - 457)/5) + {2} - 306, System.Int64) - convert(iif(convert(substring([DateRecd], 5, 2), System.Int64) < 3, 365*(convert(substring([DateRecd], 1, 4), System.Int64) - 1) + (convert(substring([DateRecd], 1, 4), System.Int64) - 1)/4 - (convert(substring([DateRecd], 1, 4), System.Int64) - 1)/100 + (convert(substring([DateRecd], 1, 4), System.Int64) - 1)/400 + (153*(convert(substring([DateRecd], 5, 2), System.Int64) + 12) - 457)/5, 365*convert(substring([DateRecd], 1, 4), System.Int64) + convert(substring([DateRecd], 1, 4), System.Int64)/4 - convert(substring([DateRecd], 1, 4), System.Int64)/100 + convert(substring([DateRecd], 1, 4), System.Int64)/400 + (153*convert(substring([DateRecd], 5, 2), System.Int64) - 457)/5) + convert(substring([DateRecd], 7, 2), System.Int64) - 306, System.Int64)",V.Ambient.Date.FormatYYYY,V.Ambient.Date.FormatMM,V.Ambient.Date.FormatDD,V.Local.sFilter)
+'F.Data.DataTable.AddExpressionColumn("dtInspQual","DaysIdle","Long",V.Local.sFilter)
+F.Data.DataTable.AddColumn("dtInspQual","DaysIdle","Long",0)
+F.Data.DataTable.AddColumn("dtInspQual","Indirect","String","")
+F.Data.DataTable.AddColumn("dtInspQual","OrderQty","String","")
+
+F.Intrinsic.Control.If(V.DataTable.dtPOInspQual.Exists)
+	F.Data.DataTable.Merge("dtPOInspQual","dtInspQual",True,2)
+	F.Data.DataTable.Close("dtPOInspQual")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.DataTable.dtJobInspQual.Exists)
+	F.Data.DataTable.Merge("dtJobInspQual","dtInspQual",True,2)
+	F.Data.DataTable.Close("dtJobInspQual")
+F.Intrinsic.Control.EndIf
+
+'Days Idle column
+F.Intrinsic.Control.If(V.Screen.F_Maintenance!chkSunday.CheckedAsBoolean)
+	F.Intrinsic.Math.Add(V.Local.iWorkdayMask,1,V.Local.iWorkdayMask)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Screen.F_Maintenance!chkMonday.CheckedAsBoolean)
+	F.Intrinsic.Math.Add(V.Local.iWorkdayMask,2,V.Local.iWorkdayMask)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Screen.F_Maintenance!chkTuesday.CheckedAsBoolean)
+	F.Intrinsic.Math.Add(V.Local.iWorkdayMask,4,V.Local.iWorkdayMask)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Screen.F_Maintenance!chkWednesday.CheckedAsBoolean)
+	F.Intrinsic.Math.Add(V.Local.iWorkdayMask,8,V.Local.iWorkdayMask)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Screen.F_Maintenance!chkThursday.CheckedAsBoolean)
+	F.Intrinsic.Math.Add(V.Local.iWorkdayMask,16,V.Local.iWorkdayMask)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Screen.F_Maintenance!chkFriday.CheckedAsBoolean)
+	F.Intrinsic.Math.Add(V.Local.iWorkdayMask,32,V.Local.iWorkdayMask)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Screen.F_Maintenance!chkSaturday.CheckedAsBoolean)
+	F.Intrinsic.Math.Add(V.Local.iWorkdayMask,64,V.Local.iWorkdayMask)
+F.Intrinsic.Control.EndIf
+Gui.F_Parts_Insp.lblStatus.Caption("Calculating Days Idle and correcting incorrect value formats")
+Gui.F_Parts_Insp.pbRefresh.Scrolling(1)
+Gui.F_Parts_Insp.pbRefresh.Min(0)
+F.Intrinsic.Control.If(V.DataTable.dtInspQual.RowCount,>,1)
+	Gui.F_Parts_Insp.pbRefresh.Max(V.DataTable.dtInspQual.RowCount--)
+F.Intrinsic.Control.EndIf
+F.Data.DataView.Create("dtInspQual","dvFixingBadData")
+F.Data.DataView.SetFilter("dtInspQual","dvFixingBadData","isnull([QtyInsp], 0) = 0")
+F.Data.DataView.SetValue("dtInspQual","dvFixingBadData",-1,"QtyInsp",0)
+F.Data.DataView.SetFilter("dtInspQual","dvFixingBadData","[QtyInsp] > 0")
+F.Data.DataView.SetValue("dtInspQual","dvFixingBadData",-1,"WCDesc","PO INSPECTION")
+F.Data.DataView.SetFilter("dtInspQual","dvFixingBadData","isnull([QtyQual], 0) = 0")
+F.Data.DataView.SetValue("dtInspQual","dvFixingBadData",-1,"QtyQual",0)
+F.Data.DataView.Create("dtJobLastTransaction","dvCheck")
+
+F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtInspQual.RowCount--,1)
+'	V.Local.sFilter.Set(V.DataTable.dtInspQual(V.Local.iCnt).QtyInsp!FieldVal)
+'	F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+'		F.Data.DataTable.SetValue("dtInspQual",V.Local.iCnt,"QtyInsp",0)
+'	F.Intrinsic.Control.ElseIf(V.Local.sFilter,>,0)
+'		F.Data.DataTable.SetValue("dtInspQual",V.Local.iCnt,"WCDesc","PO INSPECTION")
+'	F.Intrinsic.Control.EndIf
+'	V.Local.sFilter.Set(V.DataTable.dtInspQual(V.Local.iCnt).QtyQual!FieldVal)
+'	F.Intrinsic.Control.If(V.Local.sFilter,=,"")
+'		F.Data.DataTable.SetValue("dtInspQual",V.Local.iCnt,"QtyQual",0)
+'	F.Intrinsic.Control.EndIf
+	Gui.F_Parts_Insp.pbRefresh.Value(V.Local.iCnt)
+	
+	F.Intrinsic.Control.If(V.DataTable.dtInspQual(V.Local.iCnt).DateRecd!FieldVal,!=,"")
+		F.Intrinsic.Date.ConvertDString(V.DataTable.dtInspQual(V.Local.iCnt).DateRecd!FieldVal,"YYYYMMDD",V.Local.dRecd)
+		F.Intrinsic.String.Build("[JOB] = '{0}' and [SUFFIX] = '{1}' and [SEQ] = '{2}'",V.DataTable.dtInspQual(V.Local.iCnt).JOB!FieldVal,V.DataTable.dtInspQual(V.Local.iCnt).SUFFIX!FieldVal,V.DataTable.dtInspQual(V.Local.iCnt).SEQ!FieldVal,V.Local.sFilter)
+		
+		F.Data.DataView.SetFilter("dtJobLastTransaction","dvCheck",V.Local.sFilter)
+		F.Intrinsic.Control.If(V.DataView.dtJobLastTransaction!dvCheck.RowCount,>,0)
+			F.Intrinsic.Control.If(V.DataView.dtJobLastTransaction!dvCheck(0).LAST_TRANS!FieldVal,>,V.Local.dRecd)
+				V.Local.dRecd.Set(V.DataView.dtJobLastTransaction!dvCheck(0).LAST_TRANS!FieldVal)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Else
+	
+	
+		F.Intrinsic.Date.ConvertDString(V.DataTable.dtInspQual(V.Local.iCnt).HeadDateRecd!FieldVal,"YYYYMMDD",V.Local.dRecd)
+	F.Intrinsic.Control.EndIf
+'	F.Intrinsic.Control.If(V.DataTable.dtInspQual(V.Local.iCnt).DateDue!FieldVal,!=,"")
+'		F.Intrinsic.Date.ConvertDString(V.DataTable.dtInspQual(V.Local.iCnt).DateDue!FieldVal,"YYYYMMDD",V.Local.dDue)
+'	F.Intrinsic.Control.Else
+'		F.Intrinsic.Date.ConvertDString(V.DataTable.dtInspQual(V.Local.iCnt).HeadDueDate!FieldVal,"YYYYMMDD",V.Local.dDue)
+'	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Date.WorkdaysBetweenDates(V.Local.dRecd,V.Ambient.Date,V.Local.iWorkdayMask,V.Local.iDays)
+	F.Data.DataTable.SetValue("dtInspQual",V.Local.iCnt,"DaysIdle",V.Local.iDays)
+'	F.Data.DataTable.SetValue("dtInspQual",V.Local.iCnt,"DaysIdle",V.Local.iDays,"VDateRecd",V.Local.dRecd,"VDateDue",V.Local.dDue)
+'	F.Data.DataTable.SetValue("dtInspQual",V.Local.iCnt,"VDateRecd",V.Local.dRecd,"VDateDue",V.Local.dDue)
+F.Intrinsic.Control.Next(V.Local.iCnt)
+Gui.F_Parts_Insp.pbRefresh.Value(0)
+Gui.F_Parts_Insp.lblStatus.Caption("")
+
+F.Data.DataTable.Close("dtPurchLine")
+F.Data.DataTable.Close("dtPurch")
+F.Data.DataTable.Close("dtJobOp")
+F.Data.DataTable.Close("dtJob")
+F.Data.DataTable.Close("dtJobInd")
+F.Data.DataTable.Close("dtVendor")
+F.Data.DataTable.Close("dtBuyer")
+F.Data.DataTable.Close("dtPOWO")
+F.Data.DataTable.Close("dtInvMstr")
+F.Data.DataTable.Close("dtJobFields")
+F.Data.DataTable.Close("dtQualPurch")
+F.Data.DataTable.Close("dtQualJob")
+F.Data.DataTable.Close("dtPONotes")
+F.Data.DataTable.Close("dtWONotes")
+F.Data.DataTable.Close("dtJobOpenMat")
+F.Data.DataTable.Close("dtJobOpenLab")
+F.Data.DataTable.Close("dtCurrAndNextLWC")
+F.Data.DataTable.Close("dtJobLastTransaction")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.GetDataTable.End
+
+Program.Sub.cmdRefresh_Click.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+'BN, Jan 5 2022
+f.Intrinsic.Control.If(v.Global.bIsLoading)
+	f.Intrinsic.Control.exitsub
+f.Intrinsic.Control.EndIf
+v.Global.bIsLoading.Set(True)
+
+F.Intrinsic.Control.BlockEvents
+
+'BN, Jan 5 2022 no this for this
+'Gui.F_Parts_Insp.gsgcReview.Enabled(False)
+
+Gui.F_Parts_Insp.pbRefresh.Visible(True)
+Gui.F_Parts_Insp.lblStatus.Visible(True)
+F.Intrinsic.Control.If(V.DataTable.dtInspQual.Exists)
+	F.Intrinsic.Control.CallSub(Serialize)
+	F.Data.DataTable.Close("dtInspQual")
+	gui.F_Parts_Insp.gsgcReview.ClearRows("gvInspQual")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(GetDataTable)
+F.Intrinsic.Control.CallSub(SetupGridView)
+F.Intrinsic.Control.CallSub(Deserialize)
+
+Gui.F_Parts_Insp.frameRefresh.Enabled(True)
+Gui.F_Parts_Insp.cmdExport.Enabled(True)
+Gui.F_Parts_Insp.pbRefresh.Visible(False)
+Gui.F_Parts_Insp.lblStatus.Visible(False)
+
+'BN, Jan 5 2022 no need for this
+'Gui.F_Parts_Insp.gsgcReview.Enabled(True)
+
+F.Intrinsic.Control.UnBlockEvents
+
+'BN, Jan 5 2022
+v.Global.bPassedFirstLoad.Set(True)
+v.Global.bIsLoading.Set(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.cmdMaint_Click.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Screen.F_Parts_Insp!pbRefresh.Visible)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+Gui.F_Parts_Insp..Enabled(False)
+Gui.F_Maintenance..Show
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdMaint_Click.End
+
+Program.Sub.SetupGridView.Start
+V.Local.sError.Declare
+V.Local.sFilter.Declare
+V.Local.iYellowMin.Declare
+V.Local.iYellowMax.Declare
+V.Local.iColor.Declare
+F.Intrinsic.Control.Try
+
+'Filter by direct jobs and all POs
+F.Data.DataView.Create("dtInspQual","dvGridView",22,"IsNull(Indirect,'') = ''","Part DESC, Loc DESC")
+Gui.F_Parts_Insp.gsgcReview.AddGridviewFromDataview("gvInspQual","dtInspQual","dvGridView")
+
+'BN, Jan 5 2022
+gui.F_Parts_Insp.gsgcReview.SuspendLayout()
+
+Gui.F_Parts_Insp.gsgcReview.SetGridviewProperty("gvInspQual",V.Enum.GridViewPropertyNames!Multiselect,False)
+Gui.F_Parts_Insp.gsgcReview.SetGridviewProperty("gvInspQual",V.Enum.GridViewPropertyNames!ColumnAutoWidth,False)
+Gui.F_Parts_Insp.gsgcReview.SetGridviewProperty("gvInspQual",V.Enum.GridViewPropertyNames!EnableAppearanceEvenRow,True)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DateRecd",V.Enum.ColumnPropertyNames!Visible,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DateRecd",V.Enum.ColumnPropertyNames!AllowShowHide,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","HeadDateRecd",V.Enum.ColumnPropertyNames!Visible,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","HeadDateRecd",V.Enum.ColumnPropertyNames!AllowShowHide,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","StartDate",V.Enum.ColumnPropertyNames!Visible,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","StartDate",V.Enum.ColumnPropertyNames!AllowShowHide,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DateDue",V.Enum.ColumnPropertyNames!Visible,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DateDue",V.Enum.ColumnPropertyNames!AllowShowHide,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","HeadDueDate",V.Enum.ColumnPropertyNames!Visible,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","HeadDueDate",V.Enum.ColumnPropertyNames!AllowShowHide,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VendorNum",V.Enum.ColumnPropertyNames!Visible,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VendorNum",V.Enum.ColumnPropertyNames!AllowShowHide,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Indirect",V.Enum.ColumnPropertyNames!Visible,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Indirect",V.Enum.ColumnPropertyNames!AllowShowHide,False)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VStartDate",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!AllowEdit,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!AllowEdit,False)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!ReadOnly,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_PRIORITY",V.Enum.ColumnPropertyNames!ReadOnly,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_NOTES",V.Enum.ColumnPropertyNames!ReadOnly,False)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VStartDate",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!HeaderFontItalic,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_PRIORITY",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_PRIORITY",V.Enum.ColumnPropertyNames!HeaderFontItalic,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_NOTES",V.Enum.ColumnPropertyNames!HeaderFontBold,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_NOTES",V.Enum.ColumnPropertyNames!HeaderFontItalic,True)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VStartDate",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_PRIORITY",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_NOTES",V.Enum.ColumnPropertyNames!HeaderHAlignment,"Center")
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!Caption,"Part")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!Caption,"Loc")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!Caption,"Part Description")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!Caption,"Vendor")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!Caption,"Project")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!Caption,"Job")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!Caption,"Suffix")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!Caption,"Pri")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!Caption,"Code Sort")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!Caption,"Current Seq")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!Caption,"Buyer")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!Caption,"Last Date")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!Caption,"Date Due")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VStartDate",V.Enum.ColumnPropertyNames!Caption,"Start Date")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!Caption,"Inspection Qty")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!Caption,"Qty Rejected")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!Caption,"% Parts Available")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!Caption,"Open Material Seqs")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!Caption,"Next Seq")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!Caption,"Next WC")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!Caption,"WO Notes")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!Caption,"PO")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!Caption,"PO Line")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!Caption,"WC")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!Caption,"WC Desc")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!Caption,"Part Sort Code")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!Caption,"Inv Mstr Info 1")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!Caption,"Inv Mstr Info 2")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!Caption,"Days Idle")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!Caption,"Order Qty")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_PRIORITY",V.Enum.ColumnPropertyNames!Caption,"Priority by Seq")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_NOTES",V.Enum.ColumnPropertyNames!Caption,"Notes by Seq")
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VStartDate",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!AllowFocus,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!AllowFocus,False)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!AllowFocus,False)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!MinWidth,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!MinWidth,40)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!MinWidth,110)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!MinWidth,60)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!MinWidth,60)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!MinWidth,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!MinWidth,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!MinWidth,40)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!MinWidth,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!MinWidth,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!MinWidth,55)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!MinWidth,70)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!MinWidth,70)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VStartDate",V.Enum.ColumnPropertyNames!MinWidth,70)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!MinWidth,105)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!MinWidth,85)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!MinWidth,85)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!MinWidth,85)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!MinWidth,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!MinWidth,40)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!MinWidth,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!MinWidth,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!MinWidth,65)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!MinWidth,40)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!MinWidth,70)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!MinWidth,100)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!MinWidth,100)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!MinWidth,100)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!MinWidth,70)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!MinWidth,85)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_PRIORITY",V.Enum.ColumnPropertyNames!MinWidth,40)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_NOTES",V.Enum.ColumnPropertyNames!MinWidth,75)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!Width,100)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!Width,40)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!Width,200)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!Width,150)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!Width,60)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!Width,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!Width,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!Width,40)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!Width,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!Width,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!Width,150)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!Width,70)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!Width,70)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VStartDate",V.Enum.ColumnPropertyNames!Width,70)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!Width,105)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!Width,85)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!Width,85)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!Width,85)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!Width,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!Width,40)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!Width,150)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!Width,50)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!Width,65)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!Width,40)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!Width,150)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!Width,100)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!Width,100)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!Width,100)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!Width,70)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!Width,85)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_PRIORITY",V.Enum.ColumnPropertyNames!Width,95)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_NOTES",V.Enum.ColumnPropertyNames!Width,95)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!CellHAlignment,"Near")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!CellHAlignment,"Near")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!CellHAlignment,"Near")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!CellHAlignment,"Near")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!CellHAlignment,"Near")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VStartDate",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!CellHAlignment,"Far")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!CellHAlignment,"Far")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!CellHAlignment,"Near")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!CellHAlignment,"Near")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!CellHAlignment,"Near")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!CellHAlignment,"Near")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!CellHAlignment,"Center")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!CellHAlignment,"Far")
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part","IsHyperLink",True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job","IsHyperLink",True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO","IsHyperLink",True)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!CellForeColor,"Black")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!CellBackColor,"LightYellow")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_PRIORITY",V.Enum.ColumnPropertyNames!CellForeColor,"Black")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_PRIORITY",V.Enum.ColumnPropertyNames!CellBackColor,"LightYellow")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_NOTES",V.Enum.ColumnPropertyNames!CellForeColor,"Black")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_NOTES",V.Enum.ColumnPropertyNames!CellBackColor,"LightYellow")
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!DisplayCustomNumeric,"#,###,##0")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!DisplayCustomNumeric,"#,###,##0")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!DisplayCustomNumeric,"##0.00 %")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!DisplayCustomNumeric,"#,###,##0")
+
+Gui.F_Parts_Insp.gsgcReview.AddSummaryItem("gvInspQual","QtyInsp","","Sum","Total: ","","#,###,##0")
+Gui.F_Parts_Insp.gsgcReview.AddSummaryItem("gvInspQual","QtyQual","","Sum","Total: ","","#,###,##0")
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!DisplayCustomDateTime,"d")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!DisplayCustomDateTime,"d")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VStartDate",V.Enum.ColumnPropertyNames!DisplayCustomDateTime,"d")
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!MaxLength,32700)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_PRIORITY",V.Enum.ColumnPropertyNames!MaxLength,500)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SEQ_NOTES",V.Enum.ColumnPropertyNames!MaxLength,6)
+
+F.Intrinsic.Control.CallSub(SetFont)
+
+F.Intrinsic.String.Build("[VDateDue] < #{0}#",V.Ambient.Date,V.Local.sFilter)
+F.Intrinsic.Math.Sub(V.Screen.F_Maintenance!txtGreenMax.Text,1,V.Local.iYellowMin)
+F.Intrinsic.Math.Add(V.Screen.F_Maintenance!txtRedMin.Text,1,V.Local.iYellowMax)
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","VDateDue","DateDuePassed","Expression",V.Local.sFilter)
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","DaysIdle","DaysIdleRed","Greater",V.Screen.F_Maintenance!txtRedMin.Text)
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","DaysIdle","DaysIdleYellow","Between",V.Local.iYellowMin,V.Local.iYellowMax)
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","DaysIdle","DaysIdleGreen","Less",V.Screen.F_Maintenance!txtGreenMax.Text)
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady100","Expression","isnull([PartsReady], -1) = 1")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady90","Expression","isnull([PartsReady], -1) < 1 and isnull([PartsReady], -1) >= .9")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady80","Expression","isnull([PartsReady], -1) < .9 and isnull([PartsReady], -1) >= .8")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady70","Expression","isnull([PartsReady], -1) < .8 and isnull([PartsReady], -1) >= .7")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady60","Expression","isnull([PartsReady], -1) < .7 and isnull([PartsReady], -1) >= .6")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady50","Expression","isnull([PartsReady], -1) < .6 and isnull([PartsReady], -1) >= .5")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady40","Expression","isnull([PartsReady], -1) < .5 and isnull([PartsReady], -1) >= .4")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady30","Expression","isnull([PartsReady], -1) < .4 and isnull([PartsReady], -1) >= .3")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady20","Expression","isnull([PartsReady], -1) < .3 and isnull([PartsReady], -1) >= .2")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady10","Expression","isnull([PartsReady], -1) < .2 and isnull([PartsReady], -1) >= .1")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady1","Expression","isnull([PartsReady], -1) < .1 and isnull([PartsReady], -1) > 0")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReady0","Expression","isnull([PartsReady], -1) = 0")
+Gui.F_Parts_Insp.gsgcReview.AddStyleFormatCondition("gvInspQual","PartsReady","PartsReadyNull","Expression","isnull([PartsReady], -1) = -1")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","VDateDue","DateDuePassed","BackColor",V.Enum.ThemeColors!ColorRed.Highlight)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","DaysIdle","DaysIdleRed","BackColor",V.Enum.ThemeColors!ColorRed.Highlight)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","DaysIdle","DaysIdleYellow","BackColor",V.Enum.ThemeColors!ColorYellow.Highlight)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","DaysIdle","DaysIdleGreen","BackColor",V.Enum.ThemeColors!ColorGreen.Highlight)
+F.Intrinsic.UI.RGB(0,128,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady100","ForeColor","White")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady100","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(43,153,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady90","ForeColor","Black")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady90","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(85,179,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady80","ForeColor","Black")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady80","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(128,204,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady70","ForeColor","Black")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady70","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(170,230,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady60","ForeColor","Black")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady60","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(213,255,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady50","ForeColor","Black")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady50","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(255,213,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady40","ForeColor","Black")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady40","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(255,170,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady30","ForeColor","Black")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady30","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(255,128,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady20","ForeColor","Black")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady20","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(255,85,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady10","ForeColor","Black")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady10","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(255,43,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady1","ForeColor","Black")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady1","BackColor",V.Local.iColor)
+F.Intrinsic.UI.RGB(255,0,0,V.Local.iColor)
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady0","ForeColor","White")
+Gui.F_Parts_Insp.gsgcReview.SetStyleFormatConditionProperty("gvInspQual","PartsReady","PartsReady0","BackColor",V.Local.iColor)
+
+'BN, Jan 5 2022
+gui.F_Parts_Insp.gsgcReview.ResumeLayout()
+
+Gui.F_Parts_Insp.gsgcReview.MainView("gvInspQual")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.SetupGridView.End
+
+Program.Sub.F_Maintenance_UnLoad.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+Gui.F_Maintenance..Visible(False)
+F.Intrinsic.Control.CallSub(PopulateMaintenanceScreen)
+Gui.F_Parts_Insp..Enabled(True)
+Gui.F_Parts_Insp..SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.F_Maintenance_UnLoad.End
+
+Program.Sub.PopulateMaintenanceScreen.Start
+V.Local.sError.Declare
+V.Local.sLabel.Declare
+V.Local.sJobExcl.Declare
+F.Intrinsic.Control.Try
+
+F.ODBC.Connection!con.OpenCompanyConnection
+V.Global.bConnection.Set(True)
+F.Data.DataTable.CreateFromSQL("dtMaint","con","select SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, REDMIN, GREENMAX from GCG_5486_MAINT;")
+F.Intrinsic.Control.If(V.DataTable.dtMaint.RowCount,!=,1)
+	'the datatable does not have the singular entry, delete and enter default
+	F.Data.DataTable.Close("dtMaint")
+	F.ODBC.Connection!con.Execute("delete from GCG_5486_MAINT;")
+	F.ODBC.Connection!con.Execute("insert into GCG_5486_MAINT (SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, REDMIN, GREENMAX) values (0, 1, 1, 1, 1, 1, 0, 10, 5);")
+	F.Data.DataTable.CreateFromSQL("dtMaint","con","select SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, REDMIN, GREENMAX from GCG_5486_MAINT;")
+F.Intrinsic.Control.EndIf
+V.Global.bConnection.Set(False)
+F.ODBC.Connection!con.Close
+
+Gui.F_Maintenance.chkSunday.Value(V.DataTable.dtMaint(0).SUNDAY!FieldVal)
+Gui.F_Maintenance.chkMonday.Value(V.DataTable.dtMaint(0).MONDAY!FieldVal)
+Gui.F_Maintenance.chkTuesday.Value(V.DataTable.dtMaint(0).TUESDAY!FieldVal)
+Gui.F_Maintenance.chkWednesday.Value(V.DataTable.dtMaint(0).WEDNESDAY!FieldVal)
+Gui.F_Maintenance.chkThursday.Value(V.DataTable.dtMaint(0).THURSDAY!FieldVal)
+Gui.F_Maintenance.chkFriday.Value(V.DataTable.dtMaint(0).FRIDAY!FieldVal)
+Gui.F_Maintenance.chkSaturday.Value(V.DataTable.dtMaint(0).SATURDAY!FieldVal)
+
+F.Intrinsic.String.Build("Red (Greater than {0} days)",V.DataTable.dtMaint(0).REDMIN!FieldVal,V.Local.sLabel)
+Gui.F_Maintenance.lblRedMin.Text(V.Local.sLabel)
+Gui.F_Maintenance.txtRedMin.Text(V.DataTable.dtMaint(0).REDMIN!FieldVal)
+F.Intrinsic.String.Build("Yellow (Between {0} and {1} days inclusive)",V.DataTable.dtMaint(0).GREENMAX!FieldVal,V.DataTable.dtMaint(0).REDMIN!FieldVal,V.Local.sLabel)
+Gui.F_Maintenance.lblYellow.Text(V.Local.sLabel)
+Gui.F_Maintenance.txtYellowMax.Text(V.DataTable.dtMaint(0).REDMIN!FieldVal)
+Gui.F_Maintenance.txtYellowMin.Text(V.DataTable.dtMaint(0).GREENMAX!FieldVal)
+F.Intrinsic.String.Build("Green (Less than {0} days)",V.DataTable.dtMaint(0).GREENMAX!FieldVal,V.Local.sLabel)
+Gui.F_Maintenance.lblGreenMax.Text(V.Local.sLabel)
+Gui.F_Maintenance.txtGreenMax.Text(V.DataTable.dtMaint(0).GREENMAX!FieldVal)
+
+F.Global.Registry.ReadValue(-1,V.Caller.CompanyCode,"PO and Job Consolidated Dashboard",5486,2000,6,"",V.Local.sJobExcl)
+Gui.F_Maintenance.txtJobExcl.Text(V.Local.sJobExcl)
+F.Global.Registry.ReadValue(-1,V.Caller.CompanyCode,"PO and Job Consolidated Dashboard",5486,3000,6,"",V.Local.sJobExcl)
+Gui.F_Maintenance.txtJobType.Text(V.Local.sJobExcl)
+
+F.Data.DataTable.Close("dtMaint")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.PopulateMaintenanceScreen.End
+
+Program.Sub.txtRedMin_LostFocus.Start
+V.Local.sError.Declare
+V.Local.sLabel.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Screen.F_Maintenance!txtRedMin.Text,<=,V.Screen.F_Maintenance!txtGreenMax.Text)
+	Gui.F_Maintenance.txtRedMin.Text(V.Screen.F_Maintenance!txtYellowMax.Text)
+F.Intrinsic.Control.Else
+	Gui.F_Maintenance.txtYellowMax.Text(V.Screen.F_Maintenance!txtRedMin.Text)
+	F.Intrinsic.String.Build("Red (Greater than {0} days)",V.Screen.F_Maintenance!txtRedMin.Text,V.Local.sLabel)
+	Gui.F_Maintenance.lblRedMin.Text(V.Local.sLabel)
+	F.Intrinsic.String.Build("Yellow (Between {0} and {1} days inclusive)",V.Screen.F_Maintenance!txtGreenMax.Text,V.Screen.F_Maintenance!txtRedMin.Text,V.Local.sLabel)
+	Gui.F_Maintenance.lblYellow.Text(V.Local.sLabel)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtRedMin_LostFocus.End
+
+Program.Sub.txtGreenMax_LostFocus.Start
+V.Local.sError.Declare
+V.Local.sLabel.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Screen.F_Maintenance!txtRedMin.Text,<=,V.Screen.F_Maintenance!txtGreenMax.Text)
+	Gui.F_Maintenance.txtGreenMax.Text(V.Screen.F_Maintenance!txtYellowMin.Text)
+F.Intrinsic.Control.Else
+	Gui.F_Maintenance.txtYellowMin.Text(V.Screen.F_Maintenance!txtGreenMax.Text)
+	F.Intrinsic.String.Build("Green (Less than {0} days)",V.Screen.F_Maintenance!txtGreenMax.Text,V.Local.sLabel)
+	Gui.F_Maintenance.lblGreenMax.Text(V.Local.sLabel)
+	F.Intrinsic.String.Build("Yellow (Between {0} and {1} days inclusive)",V.Screen.F_Maintenance!txtGreenMax.Text,V.Screen.F_Maintenance!txtRedMin.Text,V.Local.sLabel)
+	Gui.F_Maintenance.lblYellow.Text(V.Local.sLabel)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.txtGreenMax_LostFocus.End
+
+Program.Sub.cmdSave_Click.Start
+V.Local.sError.Declare
+V.Local.iRedMin.Declare
+V.Local.iGreenMax.Declare
+F.Intrinsic.Control.Try
+
+Gui.F_Maintenance..Enabled(False)
+
+F.Data.DataTable.Create("dtMaint")
+F.Data.DataTable.AddColumn("dtMaint","SUNDAY","Boolean")
+F.Data.DataTable.AddColumn("dtMaint","MONDAY","Boolean")
+F.Data.DataTable.AddColumn("dtMaint","TUESDAY","Boolean")
+F.Data.DataTable.AddColumn("dtMaint","WEDNESDAY","Boolean")
+F.Data.DataTable.AddColumn("dtMaint","THURSDAY","Boolean")
+F.Data.DataTable.AddColumn("dtMaint","FRIDAY","Boolean")
+F.Data.DataTable.AddColumn("dtMaint","SATURDAY","Boolean")
+F.Data.DataTable.AddColumn("dtMaint","REDMIN","Long")
+F.Data.DataTable.AddColumn("dtMaint","GREENMAX","Long")
+
+V.Local.iRedMin.Set(V.Screen.F_Maintenance!txtRedMin.Text)
+V.Local.iGreenMax.Set(V.Screen.F_Maintenance!txtGreenMax.Text)
+F.Data.DataTable.AddRow("dtMaint","SUNDAY",V.Screen.F_Maintenance!chkSunday.CheckedAsBoolean,"MONDAY",V.Screen.F_Maintenance!chkMonday.CheckedAsBoolean,"TUESDAY",V.Screen.F_Maintenance!chkTuesday.CheckedAsBoolean,"WEDNESDAY",V.Screen.F_Maintenance!chkWednesday.CheckedAsBoolean,"THURSDAY",V.Screen.F_Maintenance!chkThursday.CheckedAsBoolean,"FRIDAY",V.Screen.F_Maintenance!chkFriday.CheckedAsBoolean,"SATURDAY",V.Screen.F_Maintenance!chkSaturday.CheckedAsBoolean,"REDMIN",V.Local.iRedMin,"GREENMAX",V.Local.iGreenMax)
+
+F.ODBC.Connection!con.OpenCompanyConnection
+V.Global.bConnection.Set(True)
+F.ODBC.Connection!con.Execute("delete from GCG_5486_MAINT;")
+F.Data.DataTable.SaveToDB("dtMaint","con","GCG_5486_MAINT",,128)
+V.Global.bConnection.Set(False)
+F.ODBC.Connection!con.Close
+
+'Save Job Filters to Registry
+F.Global.Registry.AddValue(-1,V.Caller.CompanyCode,"PO and Job Consolidated Dashboard",5486,2000,False,"Job Exclusions",False,0,0,V.Ambient.Date,V.Ambient.Time,V.Screen.F_Maintenance!txtJobExcl.Text.Trim)
+F.Global.Registry.AddValue(-1,V.Caller.CompanyCode,"PO and Job Consolidated Dashboard",5486,3000,False,"Job Type Exclusions",False,0,0,V.Ambient.Date,V.Ambient.Time,V.Screen.F_Maintenance!txtJobType.Text.Trim)
+
+F.Data.DataTable.Close("dtMaint")
+
+F.Intrinsic.UI.Msgbox("Saved!")
+Gui.F_Maintenance..Enabled(True)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.Serialize.Start
+V.Local.sError.Declare
+V.Local.Serialize.Declare
+F.Intrinsic.Control.Try
+
+'GridView - gvInspQual
+Gui.F_Parts_Insp.gsgcReview.Serialize("gvInspQual",V.Local.Serialize)
+F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"gvInspQual",5486,1001,False,"Serialize",False,V.Global.iFilterID,-999.0,1/1/1980,12:00:00 AM,V.Local.Serialize)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+V.Local.sError.Declare
+V.Local.Serialize.Declare
+F.Intrinsic.Control.Try
+
+'GridView - gvInspQual
+F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"gvInspQual",5486,1001,6,"",V.Local.Serialize)
+F.Intrinsic.Control.If(V.Local.Serialize.Trim,<>,"")
+	Gui.F_Parts_Insp.gsgcReview.Deserialize(V.Local.Serialize)
+F.Intrinsic.Control.EndIf
+F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"gvInspQual",5486,1001,1,0,V.Global.iFilterID)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.Deserialize.End
+
+Program.Sub.cmdExport_Click.Start
+V.Local.sError.Declare
+V.Local.sForm.Declare(String,"F_Parts_Insp")
+V.Local.sControl.Declare(String,"gsgcReview")
+V.Local.sFileExport.Declare
+V.Local.sMsg.Declare
+V.Local.sDate.Declare
+V.Local.sTime.Declare
+V.Local.bExcel.Declare
+V.Local.bFileLocked.Declare
+F.Intrinsic.Control.Try
+
+'Old version
+'F.Intrinsic.Control.If(V.Screen.F_Parts_Insp!gsgcReview.Enabled,=,False)
+'	F.Intrinsic.Control.ExitSub
+'F.Intrinsic.Control.EndIf
+
+'BN, Jan 5 2022 
+f.Intrinsic.Control.If(v.Global.bIsLoading,=,True,or,v.Global.bPassedFirstLoad,=,False)
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+'Arc Number - 5486
+F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+F.Intrinsic.String.DateString(V.Ambient.Date,V.Local.sDate)
+F.Intrinsic.String.TimeString(V.Ambient.Time,V.Local.sTime)
+F.Intrinsic.Control.If(V.Local.bExcel)
+	F.Intrinsic.String.Build("{0}\GCG_5486_{1}_Export_{2}_{3}.xlsx",V.Caller.LocalGSSTempDir,V.Local.sControl,V.Local.sDate,V.Local.sTime,V.Local.sFileExport)
+	F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+	F.Intrinsic.Control.If(V.Local.bFileLocked)
+		F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File : {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+		F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+	F.Intrinsic.Control.Else
+		Gui.[V.Local.sForm].[V.Local.sControl].Export(V.Local.sFileExport,"xlsx")
+		F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("{0}\GCG_5486_{1}_Export_{2}_{3}.csv",V.Caller.LocalGssTempDir,V.Local.sControl,V.Local.sDate,V.Local.sTime,V.Local.sFileExport)
+	F.Intrinsic.UI.ShowSaveFileDialog(V.Local.sFileExport,"CSV|*.csv",V.Local.sFileExport)
+	F.Intrinsic.Control.If(V.Local.sFileExport.IsCancel)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+	F.Intrinsic.Control.If(V.Local.bFileLocked)
+		F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+		F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+	F.Intrinsic.Control.Else
+		Gui.[V.Local.sForm].[V.Local.sControl].Export(V.Local.sFileExport,"csv")
+	F.Intrinsic.Control.EndIf
+'	F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdExport_Click.End
+
+Program.Sub.gsgcReview_RowCellClick.Start
+'V.Args.Screen, V.Args.ControlName, V.Args.ControlType, V.Args.Column and V.Args.RowIndex
+V.Local.sError.Declare
+V.Local.sLoc.Declare
+V.Local.sSuffix.Declare
+V.Local.sVendor.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Args.EventSource.UCase,!=,"FORM","or",V.Args.ControlType.UCase,!=,"GSGRIDCONTROL",V.Args.EventType.UCase,!=,"ROWCELLCLICK",V.Args.Button.UCase,!=,"LEFT",V.Args.CellValue.Trim,=,"")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.SelectCase(V.Args.Column.UCase)
+	F.Intrinsic.Control.Case("PART")
+		'Open Supply and Demand Screen
+		Gui.[V.Args.Screen].[V.Args.ControlName].GetCellValueByColumnName("gvInspQual","Loc",V.Args.RowIndex,V.Local.sLoc)
+		F.Data.DataTable.AddRow("300010","Part",V.Args.CellValue,"Loc",V.Local.sLoc)
+		Gui.F_Parts_Insp..Enabled(False)
+		F.Intrinsic.Control.CallSub(300010Sync)
+		Gui.F_Parts_Insp..Enabled(True)
+		Gui.F_Parts_Insp..SetFocus
+	F.Intrinsic.Control.Case("JOB")
+		'Open View WO Header
+		Gui.[V.Args.Screen].[V.Args.ControlName].GetCellValueByColumnName("gvInspQual","Suffix",V.Args.RowIndex,V.Local.sSuffix)
+		F.Data.DataTable.AddRow("450000","Mode","7","WONum",V.Args.CellValue,"WOSuffix",V.Local.sSuffix,"ActOrHist","A")
+		Gui.F_Parts_Insp..Enabled(False)
+		F.Intrinsic.Control.CallSub(450000Sync)
+		Gui.F_Parts_Insp..Enabled(True)
+		Gui.F_Parts_Insp..SetFocus
+	F.Intrinsic.Control.Case("PO")
+		'Open View PO Header
+		Gui.[V.Args.Screen].[V.Args.ControlName].GetCellValueByColumnName("gvInspQual","VendorNum",V.Args.RowIndex,V.Local.sVendor)
+		F.Data.DataTable.AddRow("175200","Mode","V","PONum",V.Args.Cellvalue,"VendNum",V.Local.sVendor)
+		Gui.F_Parts_Insp..Enabled(False)
+		F.Intrinsic.Control.CallSub(175200Sync)
+		Gui.F_Parts_Insp..Enabled(True)
+		Gui.F_Parts_Insp..SetFocus
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_Parts_Insp_UnLoad)
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgcReview_RowCellClick.End
+
+Program.Sub.gsgcReview_CellValueChanged.Start
+'saving editable fields
+V.Local.sError.Declare
+V.Local.sSQL.Declare
+V.Local.sPO.Declare
+V.Local.sLine.Declare
+V.Local.sJob.Declare
+V.Local.sSuffix.Declare
+V.Local.sSeq.Declare
+V.Local.bWONotes.Declare
+V.Local.bPONotes.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Args.EventSource.UCase,!=,"FORM","or",V.Args.ControlType.UCase,!=,"GSGRIDCONTROL",V.Args.EventType.UCase,!=,"CELLVALUECHANGED")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Args.Column.UCase,=,"NOTES")
+	Gui.[V.Args.Screen].[V.Args.ControlName].GetCellValueByColumnName("gvInspQual","PO",V.Args.RowIndex,V.Local.sPO)
+	F.ODBC.Connection!con.OpenCompanyConnection
+	V.Global.bConnection.Set(True)
+	F.Intrinsic.Control.If(V.Local.sPO,=,"")
+		'job entry, save to the WO notes table
+		F.ODBC.Connection!con.TableExists("GAB_4169_WO_NOTES",V.Local.bWONotes)
+		F.Intrinsic.Control.If(V.Local.bWONotes)
+			'table exists, check Job
+			Gui.[V.Args.Screen].[V.Args.ControlName].GetCellValueByColumnName("gvInspQual","Job",V.Args.RowIndex,V.Local.sJob)
+			Gui.[V.Args.Screen].[V.Args.ControlName].GetCellValueByColumnName("gvInspQual","Suffix",V.Args.RowIndex,V.Local.sSuffix)
+			F.Intrinsic.String.Build("select 1 from GAB_4169_WO_NOTES where JOB = '{0}' and SUFFIX = '{1}';",V.Local.sJob,V.Local.sSuffix,V.Local.sSQL)
+			F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+			F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+				'need to insert Job and Suffix into table
+				F.Intrinsic.String.Build("insert into GAB_4169_WO_NOTES (JOB, SUFFIX, NOTES) values ('{0}', '{1}', '{2}');",V.Local.sJob,V.Local.sSuffix,V.Args.Value.PSQLFriendly,V.Local.sSQL)
+			F.Intrinsic.Control.Else
+				'Job and Suffix are in table
+				F.Intrinsic.String.Build("update GAB_4169_WO_NOTES set NOTES = '{2}' where JOB = '{0}' and SUFFIX = '{1}';",V.Local.sJob,V.Local.sSuffix,V.Args.Value.PSQLFriendly,V.Local.sSQL)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Connection!con.Execute(V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		'po entry, save to the PO notes table
+		F.ODBC.Connection!con.TableExists("GAB_4163_PO_NOTES",V.Local.bPONotes)
+		F.Intrinsic.Control.If(V.Local.bPONotes)
+			'table exists, check PO
+			Gui.[V.Args.Screen].[V.Args.ControlName].GetCellValueByColumnName("gvInspQual","POLine",V.Args.RowIndex,V.Local.sLine)
+			F.Intrinsic.String.Build("select 1 from GAB_4163_PO_NOTES where PO = '{0}' and POLINE = '{1}';",V.Local.sPO,V.Local.sLine,V.Local.sSQL)
+			F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+			F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+				'need to insert PO Line into table
+				F.Intrinsic.String.Build("insert into GAB_4163_PO_NOTES (PO, POLINE, NOTES) values ('{0}', '{1}', '{2}');",V.Local.sPO,V.Local.sLine,V.Args.Value.PSQLFriendly,V.Local.sSQL)
+			F.Intrinsic.Control.Else
+				'PO Line is in table
+				F.Intrinsic.String.Build("update GAB_4163_PO_NOTES set NOTES = '{2}' where PO = '{0}' and POLINE = '{1}';",V.Local.sPO,V.Local.sLine,V.Args.Value.PSQLFriendly,V.Local.sSQL)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Connection!con.Execute(V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	V.Global.bConnection.Set(False)
+	F.ODBC.Connection!con.Close
+F.Intrinsic.Control.ElseIf(V.Args.Column.UCase,=,"SEQ_PRIORITY",or,V.Args.Column.UCase,=,"SEQ_NOTES")
+	Gui.[V.Args.Screen].[V.Args.ControlName].GetCellValueByColumnName("gvInspQual","Job",V.Args.RowIndex,V.Local.sJob)
+	Gui.[V.Args.Screen].[V.Args.ControlName].GetCellValueByColumnName("gvInspQual","Suffix",V.Args.RowIndex,V.Local.sSuffix)
+	Gui.[V.Args.Screen].[V.Args.ControlName].GetCellValueByColumnName("gvInspQual","Seq",V.Args.RowIndex,V.Local.sSeq)
+	F.Intrinsic.Control.If(V.Local.sSeq.Trim,<>,"")
+		F.ODBC.Connection!con.OpenCompanyConnection
+		V.Global.bConnection.Set(True)
+		F.Intrinsic.String.Build("select 1 from GCG_5486_JOB_FIELDS where JOB = '{0}' and SUFFIX = '{1}' and SEQ = '{2}';",V.Local.sJob,V.Local.sSuffix,V.Local.sSeq,V.Local.sSQL)
+		F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+			'Record does not exist
+			F.Intrinsic.String.Build("insert into GCG_5486_JOB_FIELDS (JOB, SUFFIX, SEQ, {0}) values ('{1}', '{2}', '{3}', '{4}');",V.Args.Column.UCase,V.Local.sJob,V.Local.sSuffix,V.Local.sSeq,V.Args.Value.PSQLFriendly,V.Local.sSQL)
+		F.Intrinsic.Control.Else
+			'Record exists
+			F.Intrinsic.String.Build("update GCG_5486_JOB_FIELDS set {0} = '{4}' where JOB = '{1}' and SUFFIX = '{2}' and SEQ = '{3}';",V.Args.Column.UCase,V.Local.sJob,V.Local.sSuffix,V.Local.sSeq,V.Args.Value.PSQLFriendly,V.Local.sSQL)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!con.Execute(V.Local.sSQL)
+		V.Global.bConnection.Set(False)
+		F.ODBC.Connection!con.Close
+	F.Intrinsic.Control.Else
+		Gui.[V.Args.Screen].[V.Args.ControlName].SetCellValueByColumnName("gvInspQual",V.Args.Column,V.Args.RowIndex,"")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.gsgcReview_CellValueChanged.End
+
+Program.Sub.SaveFilter.Start
+V.Local.sFilterName.Declare
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.DataTable.dtInspQual.Exists,=,False)
+	F.Intrinsic.UI.Msgbox("Load dashboard first")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Global.iFilterID,<>,0)
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,V.Global.iFilterID,5,"",V.Local.sFilterName)
+F.Intrinsic.Control.Else
+	V.Local.sFilterName.Set("")
+F.Intrinsic.Control.EndIf
+Gui.F_Filter_Name.txtFilterName.Text(V.Local.sFilterName)
+
+Gui.F_Parts_Insp..Enabled(False)
+
+Gui.F_Filter_Name..Show
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.SaveFilter.End
+
+Program.Sub.cmdSaveFilter_Click.Start
+V.Local.sError.Declare
+V.Local.sFilterName.Declare
+V.Local.sSQL.Declare
+V.Local.iID.Declare
+V.Local.iRet.Declare
+V.Local.Serialize.Declare
+F.Intrinsic.Control.Try
+
+'6 Jan 2022 - okay i am going to overhaul this saving to make it work with new serialization rules
+
+V.Local.sFilterName.Set(V.Screen.F_Filter_Name!txtFilterName.Text.Trim)
+Gui.F_Filter_Name.txtFilterName.Text(V.Local.sFilterName.PSQLFriendly)
+
+F.Intrinsic.Control.If(V.Screen.F_Filter_Name!txtFilterName.Text.Trim,=,"")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.String.Build("select 1 from GCG_5486_FILTERS where USER_ID = '{0}' and FILTER_NAME = '{1}';",V.Caller.User,V.Screen.F_Filter_Name!txtFilterName.Text.Trim,V.Local.sSQL)
+'F.ODBC.Connection!con.OpenCompanyConnection
+'V.Global.bConnection.Set(True)
+'F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+'V.Global.bConnection.Set(False)
+'F.ODBC.Connection!con.Close
+
+'F.Intrinsic.Control.If(V.Global.iFilterID,=,0)
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,0,1,0,V.Global.iFilterID)
+	F.Intrinsic.Math.Add(V.Global.iFilterID,1,V.Global.iFilterID)
+	F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,0,False,"Filter Count",False,V.Global.iFilterID,0,V.Ambient.Date,V.Ambient.Time,"")
+'F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF.Not)
+'	F.Intrinsic.UI.Msgbox("Filter has already been created under this name. Would you like to overwrite it?","Save Filter",4,V.Local.iRet)
+'	F.Intrinsic.Control.If(V.Local.iRet,=,7)
+'		'No
+'		F.Intrinsic.Control.ExitSub
+'	F.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.EndIf
+
+Gui.F_Filter_Name..Visible(False)
+
+Gui.F_Parts_Insp.gsgcReview.Serialize("gvInspQual",V.Local.Serialize)
+
+'F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF.Not)
+'	F.Intrinsic.String.Build("update GCG_5486_FILTERS set FILTER = '{0}', FONT = {2} where USER_ID = '{1}' and FILTER_NAME = '{3}';",V.Local.Serialize.PSQLFriendly,V.Caller.User,V.Global.iFont.String,V.Screen.F_Filter_Name!txtFilterName.Text.Trim,V.Local.sSQL)
+'F.Intrinsic.Control.Else
+'	F.Intrinsic.String.Build("insert into GCG_5486_FILTERS (USER_ID, FILTER_NAME, FONT, FILTER) values ('{0}', '{1}', {2}, '{3}');",V.Caller.User,V.Screen.F_Filter_Name!txtFilterName.Text.Trim,V.Global.iFont.String,V.Local.Serialize.PSQLFriendly,V.Local.sSQL)
+'F.Intrinsic.Control.EndIf
+
+'F.ODBC.Connection!con.OpenCompanyConnection
+'V.Global.bConnection.Set(True)
+'F.ODBC.Connection!con.Execute(V.Local.sSQL)
+'V.Global.bConnection.Set(False)
+'F.ODBC.Connection!con.Close
+
+F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,V.Global.iFilterID,False,V.Screen.F_Filter_Name!txtFilterName.Text.Trim,False,V.Global.iFont,0,V.Ambient.Date,V.Ambient.Time,V.Local.Serialize)
+
+Gui.F_Parts_Insp..Enabled(True)
+Gui.F_Parts_Insp..SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSaveFilter_Click.End
+
+Program.Sub.cmdCancelFilter_Click.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+Gui.F_Filter_Name..Visible(False)
+
+Gui.F_Parts_Insp..Enabled(True)
+Gui.F_Parts_Insp..SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdCancelFilter_Click.End
+
+Program.Sub.OpenFilter.Start
+V.Local.sError.Declare
+V.Local.sSQL.Declare
+V.Local.sRet.Declare
+V.Local.sFilterName.Declare
+V.Local.sBrowser.Declare
+V.Local.sTitles.Declare
+V.Local.iFilterCnt.Declare
+V.Local.iFont.Declare
+V.Local.iCnt.Declare
+V.Local.iWidths.Declare
+V.Local.Serialize.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.DataTable.dtInspQual.Exists,=,False)
+	F.Intrinsic.UI.Msgbox("Load dashboard first")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+Gui.F_Parts_Insp..Enabled(False)
+
+'F.Intrinsic.String.Build("select rtrim(FILTER_NAME), FONT from GCG_5486_FILTERS where USER_ID = '{0}' order by FILTER_NAME;",V.Caller.User,V.Local.sSQL)
+
+'F.ODBC.Connection!con.OpenCompanyConnection
+'V.Global.bConnection.Set(True)
+'F.Intrinsic.UI.Browser("Select Filter","con",V.Local.sSQL,"Filter Name*!*Font Size","100*!*25",V.Local.sRet)
+'V.Global.bConnection.Set(False)
+'F.ODBC.Connection!con.Close
+
+F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,0,1,0,V.Local.iFilterCnt)
+F.Intrinsic.Control.For(V.Local.iCnt,1,V.Local.iFilterCnt,1)
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,V.Local.iCnt,5,"***NO FILTER***",V.Local.sFilterName)
+	F.Intrinsic.Control.If(V.Local.sFilterName,<>,"***NO FILTER***")
+		F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,V.Local.iCnt,1,0,V.Local.iFont)
+		F.Intrinsic.Control.If(V.Local.sBrowser,<>,"")
+			F.Intrinsic.String.Build("{0}#$#",V.Local.sBrowser,V.Local.sBrowser)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Build("{0}{1}*!*{2}*!*{3}",V.Local.sBrowser,V.Local.iCnt,V.Local.sFilterName,V.Local.iFont,V.Local.sBrowser)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCnt)
+F.Intrinsic.Control.If(V.Local.sBrowser,=,"")
+	F.Intrinsic.UI.Msgbox("No saved filters found.")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Split("ID*!*Name*!*Font Size","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("50*!*50*!*50","*!*",V.Local.iWidths)
+F.Intrinsic.UI.BrowserFromString("Saved Filters",V.Local.sBrowser,"*!*","#$#",V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet.IsNotCancel)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+'	F.Intrinsic.String.Build("select FILTER from GCG_5486_FILTERS where USER_ID = '{0}' and FILTER_NAME = '{1}';",V.Caller.User,V.Local.sRet(0),V.Local.sSQL)
+'	F.ODBC.Connection!con.OpenCompanyConnection
+'	V.Global.bConnection.Set(True)
+'	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.Serialize)
+'	V.Global.bConnection.Set(False)
+'	F.ODBC.Connection!con.Close
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,V.Local.sRet(0).Long,6,"",V.Local.Serialize)
+	
+	V.Global.iFont.Set(V.Local.sRet(2).Long)
+	
+	F.Intrinsic.Control.If(V.Local.Serialize,<>,"")
+		Gui.F_Parts_Insp.gsgcReview.Deserialize(V.Local.Serialize)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CallSub(SetFont)
+F.Intrinsic.Control.EndIf
+
+Gui.F_Parts_Insp..Enabled(True)
+Gui.F_Parts_Insp..SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.OpenFilter.End
+
+Program.Sub.DeleteFilter.Start
+V.Local.sError.Declare
+V.Local.sSQL.Declare
+V.Local.sRet.Declare
+V.Local.iRet.Declare
+V.Local.iUserID.Declare
+V.Local.sBrowser.Declare
+V.Local.iFilterCnt.Declare
+V.Local.iCnt.Declare
+V.Local.sFilterName.Declare
+V.Local.iFont.Declare
+V.Local.sTitles.Declare
+V.Local.iWidths.Declare
+V.Local.Serialize.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.DataTable.dtInspQual.Exists,=,False)
+	F.Intrinsic.UI.Msgbox("Load dashboard first")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+Gui.F_Parts_Insp..Enabled(False)
+
+'F.Intrinsic.String.Build("select rtrim(FILTER_NAME), FONT from GCG_5486_FILTERS where USER_ID = '{0}' order by FILTER_NAME;",V.Caller.User,V.Local.sSQL)
+
+'F.ODBC.Connection!con.OpenCompanyConnection
+'V.Global.bConnection.Set(True)
+'F.Intrinsic.UI.Browser("Select Filter","con",V.Local.sSQL,"Filter Name*!*Font Size","100*!*25",V.Local.sRet)
+'V.Global.bConnection.Set(False)
+'F.ODBC.Connection!con.Close
+
+F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,0,1,0,V.Local.iFilterCnt)
+F.Intrinsic.Control.For(V.Local.iCnt,1,V.Local.iFilterCnt,1)
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,V.Local.iCnt,5,"***NO FILTER***",V.Local.sFilterName)
+	F.Intrinsic.Control.If(V.Local.sFilterName,<>,"***NO FILTER***")
+		F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"CustomFilters",5486,V.Local.iCnt,1,0,V.Local.iFont)
+		F.Intrinsic.Control.If(V.Local.sBrowser,<>,"")
+			F.Intrinsic.String.Build("{0}#$#",V.Local.sBrowser,V.Local.sBrowser)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.Build("{0}{1}*!*{2}*!*{3}",V.Local.sBrowser,V.Local.iCnt,V.Local.sFilterName,V.Local.iFont,V.Local.sBrowser)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCnt)
+F.Intrinsic.Control.If(V.Local.sBrowser,=,"")
+	F.Intrinsic.UI.Msgbox("No saved filters found.")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Split("ID*!*Name*!*Font Size","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("50*!*50*!*50","*!*",V.Local.iWidths)
+F.Intrinsic.UI.BrowserFromString("Delete Filter",V.Local.sBrowser,"*!*","#$#",V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet.IsNotCancel)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	F.Intrinsic.String.Build("Are you sure you wish to delete the '{0}' filter for user '{1}'?",V.Local.sRet(1),V.Caller.User,V.Local.sSQL)
+	F.Intrinsic.UI.Msgbox(V.Local.sSQL,"Delete Filter",4,V.Local.iRet)
+	F.Intrinsic.Control.If(V.Local.iRet,=,6)
+		'Yes
+		F.Global.Security.GetUserId(V.Caller.User,V.Caller.CompanyCode,V.Local.iUserID)
+'		F.Intrinsic.String.Build("delete from GCG_5486_FILTERS where USER_ID = '{0}' and FILTER_NAME = '{1}';",V.Caller.User,V.Local.sRet(0),V.Local.sSQL)
+		F.Intrinsic.String.Build("delete from GS_REGISTRY where USER_ID = {0} and COMPANY = '{1}' and upper(PROGRAM) = 'CUSTOMFILTERS' and REG_ID = 5486 and SEQ = {2};",V.Local.iUserID,V.Caller.CompanyCode,V.Local.sRet(0).Long,V.Local.sSQL)
+'		F.ODBC.Connection!con.OpenCompanyConnection
+		F.ODBC.Connection!con.OpenCommonConnection
+		V.Global.bConnection.Set(True)
+		F.ODBC.Connection!con.Execute(V.Local.sSQL)
+		V.Global.bConnection.Set(False)
+		F.ODBC.Connection!con.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+Gui.F_Parts_Insp..Enabled(True)
+Gui.F_Parts_Insp..SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.DeleteFilter.End
+
+Program.Sub.SetFontSize.Start
+V.Local.sError.Declare
+V.Local.iFont.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.DataTable.dtInspQual.Exists,=,False)
+	F.Intrinsic.UI.Msgbox("Load dashboard first")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+Gui.F_Parts_Insp..Enabled(False)
+Gui.F_Parts_Insp.gsgcReview.GetColumnProperty("gvInspQual","Part","HeaderFontSize",V.Local.iFont)
+
+Gui.F_Font.txtFont.Text(V.Local.iFont.String)
+
+Gui.F_Font..Show
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.SetFontSize.End
+
+Program.Sub.F_Font_UnLoad.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+Gui.F_Font..Visible(False)
+Gui.F_Parts_Insp..Enabled(True)
+Gui.F_Parts_Insp..SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.F_Font_UnLoad.End
+
+Program.Sub.cmdPlus_Click.Start
+V.Local.sError.Declare
+V.Local.iFont.Declare
+F.Intrinsic.Control.Try
+
+V.Local.iFont.Set(V.Screen.F_Font!txtFont.Text)
+F.Intrinsic.Math.Add(V.Local.iFont,1,V.Local.iFont)
+Gui.F_Font.txtFont.Text(V.Local.iFont.String)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdPlus_Click.End
+
+Program.Sub.cmdMinus_Click.Start
+V.Local.sError.Declare
+V.Local.iFont.Declare
+F.Intrinsic.Control.Try
+
+V.Local.iFont.Set(V.Screen.F_Font!txtFont.Text)
+F.Intrinsic.Math.Sub(V.Local.iFont,1,V.Local.iFont)
+F.Intrinsic.Control.If(V.Local.iFont,<=,0)
+	V.Local.iFont.Set(1)
+F.Intrinsic.Control.EndIf
+Gui.F_Font.txtFont.Text(V.Local.iFont.String)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdMinus_Click.End
+
+Program.Sub.cmdUpdate_Click.Start
+V.Local.sError.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Screen.F_Font!txtFont.Text,=,0)
+	F.Intrinsic.UI.Msgbox("Font cannot be zero")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+Gui.F_Font..Visible(False)
+
+V.Global.iFont.Set(V.Screen.F_Font!txtFont.Text)
+
+F.Intrinsic.Control.CallSub(SetFont)
+
+Gui.F_Parts_Insp..Enabled(True)
+Gui.F_Parts_Insp..SetFocus
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdUpdate_Click.End
+
+Program.Sub.SetFont.Start
+V.Local.sError.Declare
+V.Local.iHeader.Declare
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Math.Mult(V.Global.iFont,2.5,V.Local.iHeader)
+
+Gui.F_Parts_Insp.gsgcReview.SuspendLayout
+
+Gui.F_Parts_Insp.gsgcReview.SetGridviewProperty("gvInspQual","OptionsViewRowAutoHeight",True)
+Gui.F_Parts_Insp.gsgcReview.SetGridviewProperty("gvInspQual",V.Enum.GridViewPropertyNames!ColumnPanelRowHeight,V.Local.iHeader)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","StartDate",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!HeaderFontSize,V.Global.iFont)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","StartDate",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!CellFontSize,V.Global.iFont)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","StartDate",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!AllowSize,True)
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!AllowSize,True)
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","StartDate",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!HeaderWordWrap,"Wrap")
+
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Part",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Loc",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Desc",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Vendor",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Project",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Job",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Suffix",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Pri",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","CodeSort",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Seq",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Buyer",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateRecd",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","VDateDue",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","StartDate",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+'Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyInsp",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+'Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","QtyQual",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+'Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PartsReady",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","Notes",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","PO",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","POLine",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WC",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","WCDesc",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","SortCode",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo1",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","InvMstrInfo2",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","DaysIdle",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+'Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OrderQty",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","OPEN_MAT",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTSEQ_STR",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+Gui.F_Parts_Insp.gsgcReview.SetColumnProperty("gvInspQual","NEXTWC",V.Enum.ColumnPropertyNames!CellWordWrap,"Wrap")
+
+Gui.F_Parts_Insp.gsgcReview.ResumeLayout
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.SetFont.End
+
+Program.Sub.ClearFilter.Start
+F.Intrinsic.Control.Try
+
+F.Intrinsic.Control.If(V.Global.iFilterID,<>,0)
+	V.Global.iFilterID.Set(0)
+	Gui.F_Parts_Insp.gsgcReview.SetGridviewProperty("gvInspQual",V.Enum.GridViewPropertyNames!ActiveFilterString,"")
+	Gui.F_Parts_Insp.gsgcReview.SetGridviewProperty("gvInspQual","ActiveSortString","")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Caller.ScriptFile,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.ClearFilter.End
+
+Program.Sub.Comments.Start
+${$5$}$2.0.0.0$}$2
+${$6$}$bbaker$}$20230907130036556$}$pM7xsHplA2E9VCTenDTJ47gi1rF/t66W9ogthpxNXH51Mig+KbbkiZEUfs/ATsrWZYqcak585hY=
+Program.Sub.Comments.End
